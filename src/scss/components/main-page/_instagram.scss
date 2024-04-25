@@ -1,0 +1,48 @@
+.instagram {
+  margin-bottom: 68px;
+
+  @include desktop {
+    margin-bottom: 49px;
+  }
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__post-title {
+    display: inline-block;
+    margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+      text-align: center;
+      opacity: .5;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 40px;
+    @include desktop {
+      gap: 30px 30px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      gap: 6px 6px;
+    }
+  }
+
+}

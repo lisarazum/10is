@@ -1,0 +1,18 @@
+.footer {
+  background-color: $grey-color;
+
+  &__block {
+    padding: 20px 0;
+  }
+
+  &-social {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+  }
+}

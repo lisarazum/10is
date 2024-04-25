@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/common/head.html', {
+  'title': 'Главная Страница',
+  'style': 'main',
+  'script': 'main',
+})
+
+<body>
+  <div class="layout layout-main">
+    @include('partials/common/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+
+      @include('partials/main-page/instagram.html')
+      @include('partials/banners/banner-telegram.html')
+
+    </main>
+    <!-- @include('partials/common/footer.html') -->
+    <div class="overlay" data-menu-overlay></div>
+  </div>
+</body>
+
+</html>
