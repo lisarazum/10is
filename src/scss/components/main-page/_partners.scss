@@ -1,0 +1,66 @@
+.partners {
+  padding: 80px 0;
+  background-image: url('../img/main/partners-back.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include desktop {
+    padding: 60px 0 30px;
+  }
+  @include tablet {
+    padding: 100px 0 50px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__title {
+    max-width: 372px;
+    color: $white-color;
+    @include tablet {
+      text-align: center;
+      max-width: unset;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 800px;
+
+    @include desktop {
+      gap: 20px;
+      max-width: 659px;
+    }
+    @include tablet {
+      max-width: unset;
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr)
+      gap 18px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 49px;
+    aspect-ratio: 1 / 1;
+    background-color: $black-color;
+    border-radius: 40px;
+    @include desktop {
+      border-radius: 30px;
+    }
+
+    & img {
+      max-width: 80%;
+    }
+  }
+}
