@@ -3,23 +3,39 @@
   background-image: url('../img/main/partners-back.png');
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 40px;
   @include desktop {
-    padding: 60px 0 30px;
+    padding: 30px 0 30px;
   }
   @include tablet {
     padding: 100px 0 50px;
+  }
+  @include mobile {
+    border-radius: 20px;
   }
 
   &__block {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      gap: 34px;
+    }
+    @include mobile {
+      gap: 40px;
+    }
   }
 
   &__title {
     max-width: 372px;
     color: $white-color;
+    @include desktop {
+      margin-top: 30px;
+    }
     @include tablet {
+      margin-top: 0;
       text-align: center;
       max-width: unset;
     }
@@ -39,11 +55,12 @@
       max-width: 659px;
     }
     @include tablet {
-      max-width: unset;
+      margin: 0 auto;
+      max-width: 580px;
     }
     @include mobile {
-      grid-template-columns: repeat(2, 1fr)
-      gap 18px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
   }
 
@@ -51,12 +68,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 49px;
+    padding: 30px;
     aspect-ratio: 1 / 1;
     background-color: $black-color;
     border-radius: 40px;
     @include desktop {
       border-radius: 30px;
+    }
+    @include tablet {
+      padding: 25px;
     }
 
     & img {

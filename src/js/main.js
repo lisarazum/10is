@@ -1,4 +1,5 @@
 import './_vendor';
 import vars from './_vars';
 import './_functions';
-import './components/swiper-hero.js';
+import './components/slider/slider-locations';
+import './components/slider/slider-reviews';

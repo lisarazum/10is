@@ -4,16 +4,19 @@
 @include('partials/common/head.html', {
   'title': 'Главная Страница',
   'style': 'main',
-  'script': 'main',
 })
 
 <body>
   <div class="layout layout-main">
     @include('partials/common/header.html')
     <main class="main">
-      @include('partials/main-page/hero.html')
+      <!-- @include('partials/main-page/hero.html') -->
       @include('partials/main-page/about-school.html')
       @include('partials/main-page/programs.html')
+      @include('partials/main-page/locations.html')
+      @include('partials/main-page/team.html')
+      @include('partials/banners/banner-trial.html')
+      @include('partials/main-page/reviews.html')
       @include('partials/main-page/instagram.html')
       @include('partials/banners/banner-telegram.html')
       @include('partials/main-page/partners.html')
@@ -21,6 +24,8 @@
     <!-- @include('partials/common/footer.html') -->
     <div class="overlay" data-menu-overlay></div>
   </div>
+
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

@@ -167,6 +167,23 @@ input {
   }
 }
 
+.h4 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30.19px;
+
+  @include desktop {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.16px;
+  }
+  @include mobile {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
 // тексты
 .text-2 {
   font-size: 20px;
