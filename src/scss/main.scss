@@ -2,15 +2,17 @@
 
 // подключения компонентов страницы
 @import "./components/common/header";
-@import "./components/main-page/hero";
-@import "./components/main-page/about-school";
-@import "./components/main-page/locations";
-@import "./components/main-page/team";
+@import "./components/pages/main-page/hero";
+@import "./components/pages/main-page/about-school";
+@import "./components/locations/locations";
+@import "./components/pages/main-page/team";
 @import "./components/banners/banner-trial";
-@import "./components/main-page/reviews";
-@import "./components/main-page/programs";
-@import "./components/main-page/instagram";
+@import "./components/reviews/reviews";
+@import "./components/pages/main-page/programs";
+@import "./components/pages/main-page/instagram";
 @import "./components/banners/banner-telegram";
-@import "./components/main-page/partners";
+@import "./components/pages/main-page/partners";
+@import "./components/faq/faq";
+@import "./components/pages/main-page/registration";
 @import "./components/common/footer";
 

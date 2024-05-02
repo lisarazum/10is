@@ -1,13 +1,6 @@
 .locations {
-  margin-bottom: 160px;
   overflow: hidden;
 
-  @include desktop {
-    margin-bottom: 120px;
-  }
-  @include tablet {
-    margin-bottom: 100px;
-  }
   &__block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

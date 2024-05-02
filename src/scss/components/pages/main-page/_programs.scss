@@ -1,11 +1,4 @@
 .programs {
-  margin-bottom: 160px;
-  @include desktop {
-    margin-bottom: 120px;
-  }
-  @include tablet {
-    margin-bottom: 100px;
-  }
   &__block {
     display: flex;
     justify-content: space-between;

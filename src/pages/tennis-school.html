@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('../partials/common/head.html', {
+    'title': 'Теннисная школа',
+    'style': 'tennis-school',
+    })
+<body>
+  <div class="layout">
+    <!-- @include('partials/common/header.html') -->
+    <main class="main page tennis-page">
+      <div class="container">
+        <h1 class="h1 tennis-page__title">Теннисная школа</h1>
+      </div>
+      @include('../partials/pages/tennis-school/tennis-grid.html')
+
+      @include('../partials/banners/banner-certificate.html')
+    </main>
+    <!-- @include('partials/common/footer.html') -->
+  </div>
+  <script src="./js/tennis-school.js"></script>
+</body>
+</html>

@@ -1,27 +1,17 @@
 .about-school {
-  margin-bottom: 160px;
-  @include desktop {
-    margin-bottom: 120px;
-  }
-  @include tablet {
-    margin-bottom: 100px;
-  }
-  @include mobile {
-    margin-bottom: 100px;
-  }
-
+  overflow: hidden;
   &__title {
-    margin-bottom: 85px;
+    padding-bottom: 85px;
     text-align: center;
     color: $black-color;
     @include desktop {
-      margin-bottom: 60px;
+      padding-bottom: 60px;
     }
     @include tablet {
-      margin-bottom: 50px;
+      padding-bottom: 50px;
     }
     @include mobile {
-      margin-bottom: 40px;
+      padding-bottom: 40px;
     }
   }
 
