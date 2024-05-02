@@ -1,0 +1,232 @@
+.team {
+  padding: 160px 0;
+  background-color: $black-color;
+  border-radius: 40px;
+  @include desktop {
+    padding: 120px 0;
+  }
+  @include tablet {
+    padding: 100px 0;
+  }
+  @include mobile {
+    border-radius: 30px;
+  }
+
+  &-title__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+
+    & svg {
+      margin-bottom: 30px;
+      width: 50px;
+      height: 50px;
+      fill: $yellow-color;
+      @include mobile {
+        margin-bottom: 10px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__title {
+    color: $white-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &-item {
+    display: grid;
+    grid-template-columns: 30% calc(100% - 30% - 40px);
+    grid-template-rows: 45% auto;
+    gap: 20px 40px;
+    width: calc(100% / 2 - 20px);
+    @include desktop {
+      gap: 20px 30px;
+      grid-template-columns: 31% calc(100% - 31% - 30px);
+      grid-template-rows: 48% auto;
+    }
+    @include tablet {
+      grid-template-columns: 190px calc(100% - 190px - 30px);
+      grid-template-rows: auto;
+      width: 100%;
+    }
+    @include mobile {
+      grid-template-columns: 34% calc(66% - 20px);
+      gap: 20px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 40px;
+      @include desktop {
+        margin-right: 32px;
+      }
+      @include tablet {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      padding-bottom: 39px;
+      border-bottom: 1px solid rgb(255, 255, 255, .2);
+      @include desktop {
+        padding-bottom: 29px;
+      }
+      @include tablet {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      padding-top: 40px;
+      @include desktop {
+        padding-top: 30px;
+      }
+      @include tablet {
+        padding-top: 0;
+      }
+    }
+
+    &:not(:last-child) {
+      @include tablet {
+        padding-bottom: 19px;
+        border-bottom: 1px solid rgb(255, 255, 255, .2);
+      }
+    }
+
+    &:not(:first-child) {
+      @include tablet {
+        padding-top: 20px;
+      }
+    }
+
+    &__img {
+      border-radius: 20px;
+      aspect-ratio: 1 / 1;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      @include tablet {
+        max-width: 27.5%;
+        min-width: 190px;
+      }
+      @include mobile {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        max-width: unset;
+        min-width: 100px;
+        border-radius: 10px;
+      }
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+      // todo: может есть более элегантное решение
+      margin-bottom: 20px;
+      max-width: 383px;
+      color: $yellow-color;
+      @include desktop {
+        max-width: 283px;
+      }
+      @include tablet {
+        max-width: 100%;
+      }
+      @include mobile {
+        margin-bottom: 10px;
+        max-width: 123px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+    }
+
+    &__experience {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @include mobile {
+        gap: 5px;
+      }
+
+      &-title,
+      &-years {
+        display: inline-flex;
+        @include desktop {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+        @include mobile {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14px;
+        }
+      }
+
+      &-title {
+        color: $white-color;
+      }
+
+      &-years {
+        padding: 3px 16px 2px;
+        color: $black-color;
+        background-color: $yellow-color;
+        border-radius: 50px;
+        @include desktop {
+          padding: 3px 17px 2px;
+        }
+        @include mobile {
+          padding: 3px 10px;
+        }
+      }
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      gap: 5px;
+      height: fit-content;
+      @include mobile {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+      }
+
+      &-text {
+        color: $white-color;
+        @include desktop {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+        @include mobile {
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}

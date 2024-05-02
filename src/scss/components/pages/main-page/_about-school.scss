@@ -1,0 +1,247 @@
+.about-school {
+  overflow: hidden;
+  &__title {
+    padding-bottom: 85px;
+    text-align: center;
+    color: $black-color;
+    @include desktop {
+      padding-bottom: 60px;
+    }
+    @include tablet {
+      padding-bottom: 50px;
+    }
+    @include mobile {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    padding: 60px;
+    width: 50%;
+    max-width: 800px;
+    border-radius: 40px;
+    background-color: $black-color;
+    @include desktop {
+      padding: 60px 40px;
+      width: 51%;
+      max-width: 660px;
+    }
+    @include tablet {
+      padding: 50px 60px;
+      width: 100%;
+      max-width: unset;
+    }
+    @include mobile {
+      padding: 40px 20px;
+      border-radius: 20px;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 154px;
+      @include desktop {
+        margin-bottom: 120px;
+      }
+      @include tablet {
+        margin-bottom: 300px;
+      }
+      @include mobile {
+        margin-bottom: 216px;
+      }
+    }
+
+    &:nth-child(2) {
+      position: relative;
+      display: flex;
+      align-self: flex-end;
+      margin-bottom: 131px;
+      @include desktop {
+        margin-bottom: 120px;
+        max-width: 630px;
+      }
+      @include tablet {
+        margin-bottom: 300px;
+        width: 100%;
+        max-width: unset;
+      }
+      @include mobile {
+        margin-bottom: 216px;
+      }
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30.19px;
+    color: $white-color;
+    @include tablet {
+      font-size: 20px;
+      line-height: 25.16px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    box-shadow: 0px 5px 50px 0px #0000001A;
+
+    &.img1 {
+      top: -39px;
+      right: 8.2vw;
+      max-width: 401px;
+      max-height: 301px;
+      rotate: -10deg;
+
+      @include desktop {
+        top: 5px;
+        right: 8vw;
+        max-width: 340px;
+        max-height: 255px;
+      }
+      @include tablet {
+        top: 12%;
+        right: 8vw;
+        max-width: 348px;
+        max-height: 263px;
+        rotate: 7deg;
+      }
+      @include mobile {
+        top: 13.5%;
+        right: 3vw;
+        max-width: 178px;
+        max-height: 133px;
+        rotate: 11deg;
+      }
+    }
+
+    &.img2 {
+      top: 25%;
+      left: 18.5%;
+      max-width: 401px;
+      max-height: 301px;
+      rotate: 11deg;
+      @include desktop {
+        top: 23%;
+        left: 17.9%;
+        max-width: 366px;
+        max-height: 275px;
+      }
+      @media (max-width: 1200px) {
+        left: 13.9%;
+      }
+      @include tablet {
+        top: 63.7%;
+        left: 9%;
+        max-width: 300px;
+        max-height: 225px;
+        rotate: -12deg;
+        z-index: 2;
+      }
+      @include mobile {
+        top: 67.7%;
+        left: 8%;
+        max-width: 163px;
+        max-height: 123px;
+        rotate: -14deg;
+      }
+    }
+    &.img3 {
+      top: 39%;
+      left: 4%;
+      max-width: 274px;
+      max-height: 332px;
+      rotate: -17deg;
+      @include desktop {
+        top: 41.1%;
+        left: 6.2%;
+        max-width: 250px;
+        max-height: 304px;
+      }
+      @include tablet {
+        top: 18.5%;
+        left: 11.2%;
+        max-width: 203px;
+        max-height: 247px;
+      }
+      @include mobile {
+        top: 22.7%;
+        left: 3.2%;
+        max-width: 131px;
+        max-height: 159px;
+        rotate: -15deg
+      }
+    }
+
+    &.img4 {
+      bottom: -5.5%;
+      right: 13.5%;
+      max-width: 307px;
+      max-height: 372px;
+      rotate: 10deg;
+      @include desktop {
+        bottom: 2.5%;
+        right: 14.5%;
+        max-width: 278px;
+        max-height: 338px;
+      }
+      @include tablet {
+        bottom: 19%;
+        right: 12%;
+        max-width: 249px;
+        max-height: 302px;
+      }
+      @include mobile {
+        bottom: 26%;
+        right: 3%;
+        max-width: 143px;
+        max-height: 173px;
+        rotate: 15deg;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    margin: 0 auto;
+    max-width: 239px;
+
+    @include desktop {
+      max-width: 220px;
+    }
+    @include tablet {
+      max-width: 200px;
+    }
+  }
+
+}

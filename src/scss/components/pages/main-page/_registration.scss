@@ -1,0 +1,196 @@
+.registration {
+  @include mobile {
+    padding: 100px 0 50px;
+    background-color: $yellow-color;
+    border-radius: 20px;
+  }
+
+  & .container {
+    @include mobile {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 40px;
+    @include desktop {
+      gap: 30px;
+    }
+  }
+
+  &-left {
+    padding: 62px 60px 61px;
+    width: 50%;
+    max-width: 50%;
+    background-color: $yellow-color;
+    border-radius: 40px;
+    @include desktop {
+      padding: 60px 40px;
+    }
+    @include tablet {
+      padding: 50px 40px;
+      width: 100%;
+      max-width: 100%;
+    }
+    @include mobile {
+      padding: 0;
+      background-color: unset;
+      border-radius: 0;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+      max-width: 566px;
+      color: $black-color;
+      @include desktop {
+        max-width: 425px;
+      }
+      @include tablet {
+        margin-bottom: 50px;
+      }
+      @include mobile {
+        margin-bottom: 40px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: center;
+      }
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include tablet {
+      gap: 30px;
+    }
+    &__label {
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $black-color;
+
+      & input {
+        width: 100%;
+        background-color: transparent;
+        @include mobile {
+          text-align: center;
+        }
+        &::placeholder {
+          color: $black-color;
+          opacity: .4;
+        }
+      }
+
+      & select {
+        color: $black-color;
+        opacity: .4;
+        background-color: transparent;
+        @include mobile {
+          display: flex;
+          margin: 0 auto;
+        }
+      }
+
+      & textarea {
+        position: relative;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 22px;
+        background-color: transparent;
+        white-space: pre-wrap;
+
+        &::placeholder {
+          color: $black-color;
+          opacity: .4;
+        }
+        @include mobile {
+          text-align: center;
+        }
+
+        &~.triangle {
+          position: absolute;
+          bottom: 12px;
+          right: 0;
+          display: block;
+          width: 10px;
+          height: 10px;
+          border: 5px solid transparent;
+          border-right: 5px solid $black-color;
+          border-bottom: 5px solid $black-color;
+          // cursor: se-resize;
+        }
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @include desktop {
+        gap: 10px;
+      }
+      @include tablet {
+        margin-top: 20px;
+        gap: 20px;
+      }
+      &__button {
+        min-width: 239px;
+        @include desktop {
+          min-width: 220px;
+        }
+        @include tablet {
+          min-width: 200px;
+        }
+        @include mobile {
+          margin: 0 auto;
+        }
+      }
+
+      &__text {
+        display: inline;
+        max-width: 317px;
+        color: $black-color;
+        opacity: .5;
+        cursor: default;
+        @include desktop {
+          max-width: 280px;
+        }
+        @include mobile {
+          display: none;
+        }
+
+        & a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &-right {
+    width: 50%;
+    border-radius: 40px;
+    overflow: hidden;
+    @include tablet {
+      display: none;
+    }
+
+    & img {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+@import "./components/pages/tennis-school/tennis-grid";
+@import "./components/banners/banner-certificate";
+@import "./components/common/footer";
+
+.tennis-page {
+  &__title {
+    margin-bottom: 60px;
+    color: $black-color;
+    text-align: center;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 22px;
+    }
+  }
+}

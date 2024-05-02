@@ -1,0 +1,154 @@
+.programs {
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    max-width: 419px;
+    @include desktop {
+      max-width: 303px;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+      max-width: unset;
+      text-align: center;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+      text-align: start;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 57.3%;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 43px 76px 42px 69px;
+    border-radius: 40px;
+    @include desktop {
+      padding: 39px;
+    }
+    @include tablet {
+      padding: 39px 29px 39px 39px;
+      border-radius: 30px;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+      padding: 29px 19px;
+      border-radius: 20px;
+    }
+
+    &:first-child {
+      background-color: $white-color;
+      border: 1px solid $black-color;
+
+      & .programs-item__title,
+      & .prograp-item__text {
+        color: $black-color;
+      }
+
+      & .programs-item__svg {
+        stroke: $black-color;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: $black-color;
+      & .programs-item__title,
+      & .prograp-item__text,
+      & .programs-item__link span {
+        color: $white-color;
+      }
+
+      & .programs-item__svg {
+        stroke: $yellow-color;
+        fill: $yellow-color;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: $yellow-color;
+      & .programs-item__title,
+      & .prograp-item__text {
+        color: $black-color;
+      }
+
+      & .programs-item__svg {
+        stroke: $black-color;
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: $white-color;
+      border: 1px solid $yellow-color;
+      & .programs-item__title,
+      & .prograp-item__text {
+        color: $black-color;
+      }
+
+      & .programs-item__svg {
+        stroke: $black-color;
+      }
+    }
+
+    &__info {
+      max-width: 533px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-self: flex-start;
+      margin-top: 26px;
+      @include desktop {
+        margin-top: 29px;
+      }
+      @include mobile {
+        align-items: center;
+        align-self: flex-end;
+        gap: 10px;
+        margin-top: 0;
+      }
+
+      & span {
+        display: none;
+        @include mobile {
+          display: flex;
+        }
+      }
+    }
+
+    &__svg {
+      width: 44.35px;
+      height: 42px;
+      @include mobile {
+        width: 8.7px;
+        height: 8.7px;
+      }
+    }
+  }
+}

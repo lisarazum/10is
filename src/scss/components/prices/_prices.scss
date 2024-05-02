@@ -1,0 +1,290 @@
+.prices {
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__pre-title {
+    margin-bottom: 10px;
+    color: $grey-color;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $black-color;
+    text-align: center;
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__post-title {
+    color: $black-color;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 60px;
+    @include desktop {
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 1140px) {
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    min-height: 402px;
+    padding: 50px 45px 50px 50px;
+    width: calc(100% / 3);
+    border: 1px solid $black-color;
+    border-radius: 40px;
+
+    @include desktop {
+      padding: 40px;
+      min-height: 365px;
+    }
+    @include tablet {
+      padding: 40px 45px 46px;
+      border-radius: 30px;
+    }
+    @include mobile {
+      padding: 40px 30px 40px;
+      min-height: unset;
+    }
+
+    &:nth-child(1) {
+      @media (max-width: 1140px) {
+        width: calc(100% / 2 - 15px);
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: $black-color;
+
+      @media (max-width: 1140px) {
+        width: calc(100% / 2 - 15px);
+      }
+      @include mobile {
+        width: 100%;
+      }
+
+      & .prices-item__title,
+      & .prices-item__post-title,
+      & .prices-item__item,
+      & .prices-item__price {
+        color: $white-color;
+      }
+
+      & .prices-item__item::before {
+        background-color: $yellow-color;
+      }
+    }
+    &:nth-child(3) {
+      @media (max-width: 1140px) {
+        width: 100%;
+      }
+      @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 38px 40px 40px;
+        min-height: 259px;
+      }
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      & .prices-item__titles,
+      & .prices-item__list {
+        @include tablet {
+          grid-column: 1/3;
+          margin-bottom: 30px;
+        }
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      & .prices-item__btn {
+        @include tablet {
+          width: 240px;
+          height: fit-content;
+          margin-left: auto;
+        }
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+
+    &__titles {
+      margin-bottom: 40px;
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      color: $black-color;
+      @include desktop {
+        font-size: 32px;
+        line-height: 30px;
+      }
+      @include mobile {
+        font-size: 24px;
+        line-height: 1;
+        text-align: center;
+      }
+    }
+
+    &__post-title {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22.64px;
+      color: $black-color;
+      @include desktop {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include mobile {
+        width: 100%;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: auto;
+      @include mobile {
+        margin-bottom: 20px;
+        padding-left: 28px;
+      }
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 16px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        background-color: $grey-color;
+        border-radius: 100%;
+        translate: 0 -50%;
+      }
+    }
+
+    &__price {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: $black-color;
+      white-space: nowrap;
+      @include desktop {
+        font-size: 32px;
+        line-height: 30px;
+      }
+      @include tablet {
+        font-size: 4.15vw;
+      }
+      @include mobile {
+        width: 100%;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @include desktop {
+        padding: 15px 40px 15px 35px;
+      }
+      @include tablet {
+        padding: 13px 25px 13px 20px;
+      }
+
+      & svg {
+        margin-top: 4px;
+        width: 16px;
+        height: 16px;
+        fill: $black-color;
+        @include tablet {
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: inline-block;
+    color: $black-color;
+    @include desktop {
+      font-size: 14px;
+      line-height: 17.61px;
+    }
+    @include mobile {
+      width: 100%;
+      max-width: 255px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    & a {
+      display: inline-block;
+      color: $grey-color;
+      border-bottom: 1px solid $grey-color;
+      @include desktop {
+        border: none;
+      }
+    }
+  }
+}

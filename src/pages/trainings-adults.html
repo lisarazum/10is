@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('../partials/common/head.html', {
+    'title': 'Взрослые тренировка',
+    'style': 'trainings-adults',
+    })
+<body>
+  <div class="layout">
+    <!-- @include('partials/common/header.html') -->
+    <main class="main page">
+
+      @include('../partials/locations/locations.html')
+
+      @include('../partials/prices/prices.html')
+
+      @include('../partials/reviews/reviews.html')
+
+      @include('../partials/faq/faq.html')
+    </main>
+    <!-- @include('partials/common/footer.html') -->
+  </div>
+  <script src="/js/trainings-adults.js"></script>
+</body>
+</html>

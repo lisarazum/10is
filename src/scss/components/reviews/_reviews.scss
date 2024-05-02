@@ -1,0 +1,433 @@
+.reviews {
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 73%;
+    @include mobile {
+      max-width: 97%;
+    }
+  }
+
+  &__swiper {
+    padding-top: 60px;
+    @include desktop {
+      padding-top: 62px;
+    }
+    @include tablet {
+      padding-top: 50px;
+    }
+    @include mobile {
+      padding-top: 40px;
+    }
+    & .swiper-slide {
+      &:nth-child(odd) {
+        & .reviews-pictures__img {
+          &:nth-child(1) {
+            bottom: -700%;
+            left: 10%;
+            width: 50%;
+            rotate: -10.29deg;
+            @include desktop {
+              left: 20%;
+              width: 45%;
+            }
+            @include tablet {
+              top: unset;
+              right: unset;
+              bottom: unset;
+              left: unset;
+              width: unset;
+            }
+          }
+
+          &:nth-child(2) {
+            top: -100px;
+            right: 9%;
+            width: 40%;
+            rotate: 7.97deg;
+            @include desktop {
+              width: 30%;
+            }
+            @include tablet {
+              top: unset;
+              right: unset;
+              bottom: unset;
+              left: unset;
+              width: unset;
+            }
+          }
+        }
+      }
+      &:nth-child(even) {
+        & .reviews-pictures__img {
+          &:nth-child(1) {
+            bottom: -700%;
+            left: 10%;
+            width: 50%;
+            rotate: 10.29deg;
+            @include desktop {
+              left: 20%;
+              width: 45%;
+            }
+            @include tablet {
+              top: unset;
+              right: unset;
+              bottom: unset;
+              left: unset;
+              width: unset;
+            }
+          }
+
+          &:nth-child(2) {
+            top: -100px;
+            right: 9%;
+            width: 40%;
+            rotate: -7.97deg;
+            @include desktop {
+              width: 30%;
+            }
+            @include tablet {
+              top: unset;
+              right: unset;
+              bottom: unset;
+              left: unset;
+              width: unset;
+            }
+          }
+        }
+      }
+
+      & .reviews__slide {
+        & .reviews-pictures__img {
+          &:nth-child(1) {
+            @include tablet {
+              left: 5%;
+              bottom: 0;
+              width: 42%;
+              rotate: -10deg;
+            }
+            @include mobile {
+              left: 0;
+              width: 70%;
+            }
+
+            &.horizontal {
+              @include desktop {
+                bottom: -200%;
+                left: 0;
+                width: 60%;
+                height: fit-content;
+                rotate: -10deg;
+              }
+              @include tablet {
+                bottom: 0;
+              }
+            }
+          }
+          &:nth-child(2) {
+            @include tablet {
+              top: 0;
+              right: 5%;
+              width: 43%;
+              rotate: 10deg;
+            }
+            @include mobile {
+              width: 50%;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include mobile {
+      display: none;
+    }
+    &.swiper-button-next,
+    &.swiper-button-prev {
+      width: 19.5px;
+      height: 39px;
+      &:after {
+        display: none;
+      }
+      @include desktop {
+        top: 47%;
+        width: 15px;
+        height: 30px;
+      }
+      @include tablet {
+        top: 47.5%;
+        width: 10px;
+        height: 20px;
+      }
+
+      & svg {
+        width: 100%;
+        height: 100%;
+        stroke: #000000;
+        stroke-width: 1px;
+        fill: transparent;
+      }
+
+      &.swiper-button-prev {
+        top: 49.5%;
+        left: 28px;
+        @include tablet {
+          left: 20px;
+        }
+        & svg {
+          rotate: 180deg;
+        }
+      }
+
+      &.swiper-button-next {
+        top: 49.5%;
+        right: 28px;
+        @include tablet {
+          right: 20px;
+        }
+      }
+
+      &.swiper-button-disabled {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 100px 100px 114px;
+    width: 85%;
+    max-width: 1640px;
+    min-height: 576px;
+    background-color: $yellow-color;
+    border-radius: 40px;
+    @include desktop {
+      gap: 15px;
+      padding: 70px 80px 64px;
+      width: 90%;
+      max-width: 1290px;
+      min-height: 406px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 11px;
+      padding: 50px 60px 0;
+      max-width: 690px;
+      min-height: 674px;
+    }
+    @include mobile {
+      gap: 5px;
+      padding: 50px 30px 0;
+      width: 100%;
+      min-width: unset;
+      min-height: unset;
+    }
+  }
+
+  &-content {
+    max-width: 45%;
+    @include tablet {
+      max-width: unset;
+    }
+    & svg {
+      margin-bottom: 40px;
+      width: 29px;
+      height: 17px;
+      fill: $black-color;
+      @include desktop {
+        margin-bottom: 30px;
+        width: 20px;
+        height: 12px;
+      }
+      @include tablet {
+        margin-bottom: 38px;
+      }
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 40px;
+      color: $black-color;
+    }
+
+    &__name {
+      @include mobile {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+  &-pictures {
+    position: relative;
+    margin: auto 0;
+    width: 45%;
+    height: 20px;
+    @include tablet {
+      width: 100%;
+      height: 364px;
+    }
+    @include mobile {
+      height: 269px;
+    }
+
+    &__img {
+      position: absolute;
+      display: block;
+      padding: 21px 21px 75px;
+      background-color: $white-color;
+      box-shadow: 0px 4px 30px 0px #0000001A;
+      @include desktop {
+        padding: 15px 15px 53px;
+      }
+      @include tablet {
+        padding: 16px 16px 56px;
+      }
+      @include mobile {
+        padding: 8px 8px 30px;
+      }
+    }
+  }
+
+  &-fraction {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    left: unset;
+    width: 74px;
+    @include tablet {
+      bottom: unset;
+      right: 6%;
+    }
+    @include mobile {
+      right: 8%;
+      width: 45px;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 12px;
+    }
+
+    & .swiper-slide {
+      color: $black-color;
+      opacity: 1;
+    }
+
+    & .total-slide,
+    & .separator {
+      opacity: .3;
+    }
+  }
+
+  // кнопка читать отзыв
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    @include desktop {
+      margin-top: 30px;
+    }
+    @include tablet {
+      gap: 30px;
+      margin-top: 50px;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    &__left {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      @include desktop {
+        align-items: center;
+        gap: 5px;
+      }
+      @include mobile {
+        gap: 2px;
+      }
+    }
+
+    &__logo {
+      width: 23px;
+      height: 43px;
+      @include desktop {
+        margin-top: 6px;
+        width: 13px;
+        height: 28px;
+      }
+    }
+
+    &__rating {
+      @include desktop {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 30px;
+      }
+      @include mobile {
+        margin-right: 3px;
+      }
+      &-block {
+        & .stars {
+          display: flex;
+          gap: 4px;
+          @include tablet {
+            gap: 3px;
+          }
+
+          & svg {
+            width: 20px;
+            height: 20px;
+            fill: $yellow-color;
+            @include desktop {
+              width: 17px;
+              height: 17px;
+            }
+          }
+        }
+
+        & .rating {
+          color: $black-color;
+          @include desktop {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__link {
+      padding: 18px 53px 17px;
+      min-width: 239px;
+      @include desktop {
+        padding: 15px 57px 15px;
+        min-width: 220px;
+      }
+      @include tablet {
+        padding: 14px 54px 13px;
+        min-width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+@import "./components/locations/locations";
+@import "./components/prices/prices";
+@import "./components/reviews/reviews";
+@import "./components/faq/faq";
+@import "./components/common/footer";
