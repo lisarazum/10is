@@ -1,0 +1,122 @@
+.steps {
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    gap: 68px;
+    @include desktop {
+      gap: 40px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 82px;
+    }
+    @include mobile {
+      gap: 40px;
+    }
+  }
+
+  &__content {
+    width: calc(100% - 30%);
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    max-width: 60%;
+    @include tablet {
+      margin-bottom: 50px;
+      max-width: 70%;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 100%;
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__item {
+      width: calc(100% / 3 - 54px);
+      @include desktop {
+        width: calc(100% / 3 - 17px);
+      }
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    &__number {
+      display: inline-block;
+      margin-bottom: 15px;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $yellow-color;
+      & span {
+        letter-spacing: -0.3em;
+      }
+
+      @include mobile {
+        font-size: 24px;
+        line-height: 1;
+        & span {
+          letter-spacing: -0.28em;
+        }
+        letter-spacing: -0.28em;
+      }
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      color: $black-color;
+      @include desktop {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+
+    &__text {
+      color: $black-color;
+    }
+  }
+
+  &__right {
+    width: 31%;
+    max-height: 855px;
+    border-radius: 40px;
+    overflow: hidden;
+    @include desktop {
+      width: 34%;
+      max-height: 729px;
+      border-radius: 30px;
+    }
+    @include tablet {
+      width: unset;
+      max-width: 410px;
+    }
+    @include mobile {
+      position: relative;
+      left: -10px;
+      width: 100vw;
+      max-width: unset;
+      max-height: unset;
+      border-radius: 20px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

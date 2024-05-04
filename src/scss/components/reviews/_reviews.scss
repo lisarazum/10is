@@ -9,11 +9,22 @@
   &__title {
     margin-bottom: 30px;
     text-align: center;
+    cursor: default;
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
     text-align: center;
     max-width: 73%;
+    cursor: default;
+    @include desktop {
+      max-width: 85%;
+    }
+    @include tablet {
+      max-width: 95%;
+    }
     @include mobile {
       max-width: 97%;
     }
@@ -25,7 +36,7 @@
       padding-top: 62px;
     }
     @include tablet {
-      padding-top: 50px;
+      padding-top: 64px;
     }
     @include mobile {
       padding-top: 40px;
@@ -182,8 +193,15 @@
         fill: transparent;
       }
 
-      &.swiper-button-prev {
+      &.swiper-button-prev,
+      &.swiper-button-next {
         top: 49.5%;
+        @include desktop {
+          top: 47.5%;
+        }
+      }
+
+      &.swiper-button-prev {
         left: 28px;
         @include tablet {
           left: 20px;
@@ -194,7 +212,6 @@
       }
 
       &.swiper-button-next {
-        top: 49.5%;
         right: 28px;
         @include tablet {
           right: 20px;
@@ -268,9 +285,11 @@
     &__text {
       margin-bottom: 40px;
       color: $black-color;
+      cursor: default;
     }
 
     &__name {
+      cursor: default;
       @include mobile {
         font-size: 10px;
         line-height: 12px;
@@ -319,11 +338,8 @@
       right: 6%;
     }
     @include mobile {
-      right: 8%;
+      right: 9%;
       width: 45px;
-      font-size: 10px;
-      font-weight: 400;
-      line-height: 12px;
     }
 
     & .swiper-slide {
@@ -381,6 +397,7 @@
     }
 
     &__rating {
+      cursor: default;
       @include desktop {
         font-size: 32px;
         font-weight: 700;
@@ -410,6 +427,7 @@
 
         & .rating {
           color: $black-color;
+          cursor: default;
           @include desktop {
             display: none;
           }
