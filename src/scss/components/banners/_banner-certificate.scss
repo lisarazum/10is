@@ -36,20 +36,19 @@
     display: inline-block;
     margin-bottom: 10px;
     color: $black-color;
+    cursor: default;
     @include tablet {
       margin-bottom: 20px;
     }
     @include mobile {
       margin-bottom: 10px;
-      max-width: 80%;
-      font-size: 32px;
-      line-height: 30px;
     }
   }
 
   &__text {
+    cursor: default;
     @include mobile {
-      max-width: 90%;
+      max-width: 234px;
       font-size: 14px;
       line-height: 18px;
     }
@@ -79,31 +78,32 @@
   &__background {
     & svg {
       position: absolute;
-      right: 29%;
-      bottom: 0;
+      left: 370px;
+      bottom: 4px;
       width: 134.5px;
       height: 65.4px;
-      @media (max-width: 1520px) {
-        right: 20%;
-      }
       @include desktop {
-        top: -14%;
-        right: 30%;
+        left: 315px;
+        bottom: -11px;
       }
       @include tablet {
-        top: -28%;
-        right: 32%;
-      }
-      @media (max-width: 670px) {
-        right: 19%;
+        left: 252px;
+        bottom: -9px;
       }
       @include mobile {
-        top: -34%;
-        right: unset;
-        left: 205px;
-        width: 52px;
-        height: 25px;
-        rotate: -45deg;
+        display: none;
+      }
+
+      &.mobile {
+        display: none;
+        @include mobile {
+          display: flex;
+          left: 210px;
+          bottom: 54px;
+          width: 63px;
+          height: 34px;
+          rotate: -45deg;
+        }
       }
     }
   }

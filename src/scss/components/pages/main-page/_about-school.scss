@@ -1,17 +1,17 @@
 .about-school {
-  overflow: hidden;
   &__title {
-    padding-bottom: 85px;
+    margin-bottom: 88px;
     text-align: center;
     color: $black-color;
+    cursor: default;
     @include desktop {
-      padding-bottom: 60px;
+      margin-bottom: 66px;
     }
     @include tablet {
-      padding-bottom: 50px;
+      margin-bottom: 50px;
     }
     @include mobile {
-      padding-bottom: 40px;
+      margin-bottom: 40px;
     }
   }
 
@@ -37,6 +37,7 @@
     max-width: 800px;
     border-radius: 40px;
     background-color: $black-color;
+    overflow: hidden;
     @include desktop {
       padding: 60px 40px;
       width: 51%;
@@ -102,6 +103,7 @@
     font-weight: 500;
     line-height: 30.19px;
     color: $white-color;
+    cursor: default;
     @include tablet {
       font-size: 20px;
       line-height: 25.16px;
@@ -114,7 +116,6 @@
 
   &__img {
     position: absolute;
-    box-shadow: 0px 5px 50px 0px #0000001A;
 
     &.img1 {
       top: -39px;
@@ -169,19 +170,19 @@
         z-index: 2;
       }
       @include mobile {
-        top: 67.7%;
-        left: 8%;
+        top: 69.7%;
+        left: 10%;
         max-width: 163px;
         max-height: 123px;
         rotate: -14deg;
       }
     }
     &.img3 {
-      top: 39%;
-      left: 4%;
+      top: 38.6%;
+      left: 4.2%;
       max-width: 274px;
       max-height: 332px;
-      rotate: -17deg;
+      rotate: -16deg;
       @include desktop {
         top: 41.1%;
         left: 6.2%;
@@ -195,8 +196,8 @@
         max-height: 247px;
       }
       @include mobile {
-        top: 22.7%;
-        left: 3.2%;
+        top: 23.7%;
+        left: 5.2%;
         max-width: 131px;
         max-height: 159px;
         rotate: -15deg
@@ -222,8 +223,8 @@
         max-height: 302px;
       }
       @include mobile {
-        bottom: 26%;
-        right: 3%;
+        bottom: 24.5%;
+        right: 5%;
         max-width: 143px;
         max-height: 173px;
         rotate: 15deg;
@@ -232,15 +233,17 @@
   }
 
   &__link {
+    position: relative;
     display: block;
     margin: 0 auto;
-    max-width: 239px;
+    min-width: 239px;
+    z-index: 10;
 
     @include desktop {
-      max-width: 220px;
+      min-width: 220px;
     }
     @include tablet {
-      max-width: 200px;
+      min-width: 200px;
     }
   }
 

@@ -12,6 +12,7 @@
     padding: 89px 0 88px;
   }
   @include mobile {
+    margin-bottom: 100px;
     padding: 100px 0;
     border-radius: 20px;
   }
@@ -36,6 +37,7 @@
     margin-bottom: 40px;
     color: $white-color;
     text-align: center;
+    cursor: default;
 
     @include tablet {
       margin-bottom: 20px;
@@ -51,6 +53,7 @@
 
     & .text {
       display: block;
+      cursor: default;
       & .old-price {
         text-decoration: line-through;
       }
