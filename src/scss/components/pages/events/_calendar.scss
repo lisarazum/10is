@@ -1,0 +1,48 @@
+.calendar {
+  &-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 71px;
+
+    &__title {
+      margin-bottom: 30px;
+      color: $black-color;
+      cursor: default;
+    }
+
+    &__text {
+      display: inline-block;
+      color: $black-color;
+      cursor: default;
+    }
+  }
+
+  &-content {
+    &__tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    &__tab {
+      color: $grey-color-disabled;
+
+      &.active {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30.19px;
+        color: $black-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+  &-table {
+    
+  }
+}

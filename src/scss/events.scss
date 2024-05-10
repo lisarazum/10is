@@ -1,0 +1,10 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+
+@import "./components/pages/events/top-content";
+@import "./components/pages/events/calendar";
+
+@import "./components/common/footer";
+

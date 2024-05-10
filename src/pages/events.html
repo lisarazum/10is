@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('../partials/common/head.html', {
+    'title': 'Мероприятия',
+    'style': 'events',
+    })
+<body>
+  <div class="layout">
+    <!-- @include('partials/common/header.html') -->
+    <main class="main page">
+
+      @include('../partials/pages/events/top-content.html')
+
+      @include('../partials/pages/events/calendar.html')
+
+    </main>
+    <!-- @include('partials/common/footer.html') -->
+  </div>
+  <script src="/js/events.js"></script>
+</body>
+</html>
