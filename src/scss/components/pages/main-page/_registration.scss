@@ -15,6 +15,7 @@
   &__title {
     margin-bottom: 60px;
     text-align: center;
+    cursor: default;
     @include tablet {
       margin-bottom: 50px;
     }
@@ -55,6 +56,7 @@
       margin-bottom: 40px;
       max-width: 566px;
       color: $black-color;
+      cursor: default;
       @include desktop {
         max-width: 425px;
       }
@@ -86,6 +88,7 @@
       & input {
         width: 100%;
         background-color: transparent;
+        outline: none;
         @include mobile {
           text-align: center;
         }
@@ -99,6 +102,7 @@
         color: $black-color;
         opacity: .4;
         background-color: transparent;
+        outline: none;
         @include mobile {
           display: flex;
           margin: 0 auto;
@@ -113,6 +117,7 @@
         min-height: 22px;
         background-color: transparent;
         white-space: pre-wrap;
+        outline: none;
 
         &::placeholder {
           color: $black-color;
@@ -132,7 +137,6 @@
           border: 5px solid transparent;
           border-right: 5px solid $black-color;
           border-bottom: 5px solid $black-color;
-          // cursor: se-resize;
         }
       }
     }
@@ -140,7 +144,7 @@
     &-bottom {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 13px;
       @include desktop {
         gap: 10px;
       }
@@ -169,6 +173,9 @@
         cursor: default;
         @include desktop {
           max-width: 280px;
+        }
+        @include tablet {
+          max-width: 335px;
         }
         @include mobile {
           display: none;

@@ -143,6 +143,7 @@ input {
   }
 }
 
+
 .social-link{
   position: relative;
   &:before{
@@ -159,5 +160,22 @@ input {
 
   & .icon{
     fill: $yellow-color;
+  }
+}
+
+.polaroid {
+  padding: 20px 20px 60px;
+  background-color: $white-color;
+  box-shadow: 0px 5px 50px 0px #0000001A;
+  @include desktop {
+    padding: 16px 16px 50px;
+    box-shadow: 0px 5px 20px 0px #00000026;
+  }
+  @include tablet {
+    padding: 13px 13px 40px;
+  }
+  @include mobile {
+    padding: 8px 8px 26px;
+    box-shadow: 0px 5px 50px 0px #0000001A;
   }
 }
