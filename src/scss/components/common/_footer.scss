@@ -1,18 +1,144 @@
 .footer {
-  background-color: $grey-color;
+  position: relative;
+  padding: 40px;
+  background-color: $black-color;
+  border-radius: 40px 40px 0 0;
 
-  &__block {
-    padding: 20px 0;
+  @include mobile{
+    padding: 50px 0;
+    border-radius: 30px 30px 0 0;
   }
 
-  &-social {
-    display: flex;
+  &__container{
+    display: grid;
     justify-content: space-between;
-    width: 30%;
+    grid-template-rows: repeat(2, min-content);
+    grid-auto-flow: column;
+    gap: 158px;
+
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
-  &-info {
-    display: flex;
-    flex-direction: column;
+  &__menu{
+    @include mobile{
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ffffff33;
+      order: 3;
+    }
+  }
+
+  &__nav{
+    &-link{
+      margin-bottom: 20px;
+      display: block;
+      color: $white-color;
+
+      @include tablet{
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__official{
+    align-self: end;
+
+    @include mobile{
+      align-self: center;
+      text-align: center;
+      order: 5;
+    }
+  }
+
+  &__copyrights{
+    color: $white-color;
+  }
+
+  &__logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 196px;
+    transform: translate(-50%, -50%);
+
+    @include desktop{
+      width: 177px;
+    }
+
+    @include tablet{
+      width: 149px;
+    }
+
+    @include mobile{
+      position: static;
+      margin: 0 auto 50px;
+      transform: unset;
+      order: 1;
+    }
+
+  }
+
+  &__contacts{
+    @include mobile{
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ffffff33;
+      order: 4;
+
+      & .footer__text{
+        text-align: center;
+      }
+    }
+  }
+
+  &__social{
+    @include mobile{
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      order: 2;
+    }
+    &-list{
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+
+      @include tablet{
+        margin-bottom: 15px;
+      }
+
+      @include mobile{
+        margin: 0;
+      }
+    }
+
+    &-link{
+     & .icon{
+       width: 30px;
+       height: 30px;
+     }
+    }
+  }
+
+  &__text{
+    margin-bottom: 20px;
+    display: block;
+    color: $white-color;
+    text-align: end;
+
+    @include tablet{
+      margin-bottom: 15px;
+    }
+
+    @include mobile{
+      margin-bottom: 10px;
+    }
   }
 }

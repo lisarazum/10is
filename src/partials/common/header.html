@@ -1,130 +1,87 @@
-<!-- <header class="header">
-  <div class="container">
-
-    <div class="header__block">
-      <a href="/" class="header__logo-link">
-        <svg class="header__logo">
-          <use xlink:href="./img/logo.png"></use>
-        </svg>
+<header class="header js-header">
+  <div class="container header__container">
+    <div class="header__logo">
+      <a href="/">
+        <img src="img/logo.png" alt="" class="header__logo--white">
+        <img src="img/logo-black.png" alt="" class="header__logo--black">
       </a>
-
-      <nav class="header-nav fixed-block" data-menu>
-        <ul class="list-reset header-nav__list">
-          <li class="header-nav__item"><a href="/">Главная</a></li>
-          <li class="header-nav__item">
-            <a href="#">Школа</a>
-            <ul class="list-reset header-nav__dropdown">
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Групповые для взрослых
-                </a>
-              </li>
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Теннис для детей
-                </a>
-              </li>
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Теннис для детей
-                </a>
-              </li>
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Индивидуальные тренировки
-                </a>
-              </li>
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Сплит тренировки
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="header-nav__item"><a href="/">Кэмпы</a></li>
-          <li class="header-nav__item"><a href="/">Турниры</a></li>
-          <li class="header-nav__item"><a href="/">Цены</a></li>
-          <li class="header-nav__item"><a href="/">Аренда корта</a></li>
-          <li class="header-nav__item">
-            <a href="#">О нас</a>
-            <ul class="list-reset header-nav__dropdown">
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Наша команда
-                </a>
-              </li>
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Корты
-                </a>
-              </li>
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Правила
-                </a>
-              </li>
-              <li class="header-nav__dropdown-item">
-                <a href="#">
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <a href="tel:+74998771317" class="header-nav__phone">
-          <svg>
-            <use xlink:href="img/sprite.svg#telephone"></use>
-          </svg>
-          +7 (499) 877-13-17
-        </a>
-        <ul class="list-reset header-icons__list">
-          <li class="header-icons__item">
-            <a href="#" class="header-icons__link">
-              <svg>
-                <use xlink:href="img/sprite.svg#watsapp"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="header-icons__item">
-            <a href="#" class="header-icons__link">
-              <svg>
-                <use xlink:href="img/sprite.svg#telegram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="header-links__block">
-        <a href="tel:+74998771317" class="header-links__phone">
-          <svg>
-            <use xlink:href="img/sprite.svg#telephone"></use>
-          </svg>
-          +7 (499) 877-13-17
-        </a>
-        <ul class="list-reset header-icons__list">
-          <li class="header-icons__item">
-            <a href="#" class="header-icons__link">
-              <svg>
-                <use xlink:href="img/sprite.svg#watsapp"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="header-icons__item">
-            <a href="#" class="header-icons__link">
-              <svg>
-                <use xlink:href="img/sprite.svg#telegram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
-        <span class="burger__line"></span>
-      </button>
     </div>
-
+    <div class="header__menu js-menu">
+      <nav class="header__nav">
+        <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Главная</span></a>
+        <div href="#" class="header__nav-link has-submenu">
+          <span class="header__nav-link-inner text-3">Школа</span>
+          <div class="header__nav-submenu">
+            <div class="header__nav-submenu-inner">
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Групповые для взрослых</span></a>
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Теннис для детей</span></a>
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Теннис для подростков</span></a>
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Индивидуальные тренировки</span></a>
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Сплит тренировки</span></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Кэмпы</span></a>
+        <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Турниры</span></a>
+        <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Цена</span></a>
+        <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Аренда корта</span></a>
+        <div href="#" class="header__nav-link has-submenu">
+          <span class="header__nav-link-inner text-3">О нас</span>
+          <div class="header__nav-submenu">
+            <div class="header__nav-submenu-inner">
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Наша команда</span></a>
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Корты</span></a>
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Правила</span></a>
+              <a href="#" class="header__nav-link"><span class="header__nav-link-inner text-3">Контакты</span></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="header__contacts header__nav-contacts">
+        <a href="tel:+74998771317" class="header__contacts-phone">
+          <svg class="header__contacts-icon icon">
+            <use xlink:href="img/sprite.svg#telephone"></use>
+          </svg>
+          +7 (499) 877-13-17
+        </a>
+        <div class="header__contacts-social">
+          <a href="#" class="header__contacts-social-link header__contacts-wa">
+            <svg class="header__contacts-icon icon">
+              <use xlink:href="img/sprite.svg#whatsapp-rounded"></use>
+            </svg>
+          </a>
+          <a href="#" class="header__contacts-social-link header__contacts-tg">
+            <svg class="header__contacts-icon icon">
+              <use xlink:href="img/sprite.svg#telegram-rounded"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header__contacts">
+      <a href="tel:+74998771317" class="header__contacts-phone">
+        <svg class="header__contacts-icon icon">
+          <use xlink:href="img/sprite.svg#telephone"></use>
+        </svg>
+        +7 (499) 877-13-17
+      </a>
+      <div class="header__contacts-social">
+        <a href="#" class="header__contacts-social-link social-link">
+          <svg class="header__contacts-icon icon">
+            <use xlink:href="img/sprite.svg#whatsapp-rounded"></use>
+          </svg>
+        </a>
+        <a href="#" class="header__contacts-social-link social-link">
+          <svg class="header__contacts-icon icon">
+            <use xlink:href="img/sprite.svg#telegram-rounded"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="header__burger js-burger">
+      <div class="header__burger-line burger-line-one"></div>
+      <div class="header__burger-line burger-line-two"></div>
+      <div class="header__burger-line burger-line-three"></div>
+    </div>
   </div>
-</header> -->
+</header>

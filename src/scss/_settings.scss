@@ -143,6 +143,26 @@ input {
   }
 }
 
+
+.social-link{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: $black-color;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  & .icon{
+    fill: $yellow-color;
+  }
+}
+
 .polaroid {
   padding: 20px 20px 60px;
   background-color: $white-color;
