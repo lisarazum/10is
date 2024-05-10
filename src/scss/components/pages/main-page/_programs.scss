@@ -9,6 +9,7 @@
 
   &__title {
     max-width: 419px;
+    cursor: default;
     @include desktop {
       max-width: 303px;
     }
@@ -46,7 +47,7 @@
       padding: 39px;
     }
     @include tablet {
-      padding: 39px 29px 39px 39px;
+      padding: 39px 29px 45px 39px;
       border-radius: 30px;
     }
     @include mobile {
@@ -61,7 +62,7 @@
       border: 1px solid $black-color;
 
       & .programs-item__title,
-      & .prograp-item__text {
+      & .programs-item__text {
         color: $black-color;
       }
 
@@ -73,7 +74,7 @@
     &:nth-child(2) {
       background-color: $black-color;
       & .programs-item__title,
-      & .prograp-item__text,
+      & .programs-item__text,
       & .programs-item__link span {
         color: $white-color;
       }
@@ -87,7 +88,7 @@
     &:nth-child(3) {
       background-color: $yellow-color;
       & .programs-item__title,
-      & .prograp-item__text {
+      & .programs-item__text {
         color: $black-color;
       }
 
@@ -100,7 +101,7 @@
       background-color: $white-color;
       border: 1px solid $yellow-color;
       & .programs-item__title,
-      & .prograp-item__text {
+      & .programs-item__text {
         color: $black-color;
       }
 
@@ -111,13 +112,21 @@
 
     &__info {
       max-width: 533px;
+      @include tablet {
+        max-width: 464px;
+      }
     }
 
     &__title {
       margin-bottom: 15px;
+      cursor: default;
       @include mobile {
         margin-bottom: 10px;
       }
+    }
+
+    &__text {
+      cursor: default;
     }
 
     &__link {
