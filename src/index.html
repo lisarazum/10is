@@ -7,12 +7,21 @@
 })
 
 <body>
-  <div class="layout layout-main">
+  <div class="layout-main">
     @include('partials/common/header.html')
     <main class="main">
       @include('partials/pages/main-page/hero.html')
-      @include('partials/pages/main-page/about-school.html')
-      @include('partials/pages/main-page/programs.html')
+      @include('partials/blocks/promo-block.html', {
+        'title': 'Школа тенниса 10is',
+        'text1': 'Мы – теннисный клуб на северо-западе Москвы. Уже 8 лет мы объединяем людей любовью к теннису ❤️',
+        'text2': '10is - больше, чем теннис. 10is - это дружеская атмосфера, поводы для общения и новых знакомств, путешествия по живописным местам, здоровье и отдых',
+        'text3': 'Мы – семья, объединяющая более 1000 учеников, где каждый может найти что-то своё<br><br>Добро пожаловать домой, в 10is&nbsp;❤️',
+        'img1': './img/main/story-1.jpg',
+        'img2': './img/main/story-2.jpg',
+        'img3': './img/main/story-3.jpg',
+        'img4': './img/main/story-4.jpg',
+      })
+      @include('partials/blocks/program-blocks.html')
       @include('partials/locations/locations.html')
       @include('partials/pages/main-page/team.html')
       @include('partials/banners/banner-trial.html')
