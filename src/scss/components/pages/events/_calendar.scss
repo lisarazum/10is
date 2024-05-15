@@ -1,0 +1,304 @@
+.calendar {
+  overflow: hidden;
+  &-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 71px;
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+      color: $black-color;
+      cursor: default;
+      @include mobile {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+
+    &__text {
+      display: inline-block;
+      color: $black-color;
+      cursor: default;
+    }
+  }
+
+  &-content {
+    &__tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 60px;
+      @include tablet {
+        margin-bottom: 50px;
+      }
+      @include mobile {
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+    }
+
+    &__tab {
+      color: $grey-color-disabled;
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 25.16px;
+      }
+      @include mobile {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      &.active {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30.19px;
+        color: $black-color;
+        text-decoration: underline;
+
+        @include desktop {
+          font-size: 20px;
+          line-height: 25.16px;
+        }
+        @include mobile {
+          font-size: 16px;
+          line-height: 20.13px;
+        }
+      }
+    }
+
+    &__info {
+      height: 0;
+      opacity: 0;
+      translate: 100% 0;
+      transition: .3s ease;
+      &.active {
+        display: flex;
+        height: fit-content;
+        opacity: 1;
+        translate: 0 0;
+      }
+    }
+  }
+
+
+  &-table {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 40px;
+    overflow: hidden;
+    @include mobile {
+      border-radius: 0;
+    }
+
+    &__head {
+      display: flex;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      @include mobile {
+        display: none;
+      }
+
+      & li {
+        padding: 30px 40px;
+        color: $white-color;
+        background-color: $black-color;
+
+        @include tablet {
+          padding: 20px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 17.61px;
+        }
+
+        &:nth-child(1) {
+          width: 20.7%;
+          @include desktop {
+            width: 25%;
+          }
+        }
+
+        &:nth-child(2) {
+          width: 28.1%;
+          @include desktop {
+            width: 25%;
+          }
+        }
+
+        &:nth-child(3) {
+          width: 20.2%;
+          @include desktop {
+            width: 25%;
+          }
+        }
+
+        &:nth-child(4) {
+          width: 31%;
+          @include desktop {
+            width: 25%;
+          }
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      margin-top: -1px;
+      border: 1px solid $grey-color-disabled;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+
+      @include mobile {
+        border: none;
+        border-radius: 0;
+      }
+
+      &-item {
+        display: flex;
+
+        @include mobile {
+          display: grid;
+          grid-template-columns: 70px calc(100% - 60px);
+          grid-template-rows: 1fr 1fr 1fr;
+          column-gap: 20px;
+          padding: 9px 0;
+        }
+
+        &:first-child {
+          @include mobile {
+            padding-top: 0;
+          }
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $grey-color-disabled;
+        }
+
+        & li {
+          display: flex;
+          align-items: center;
+          padding: 30px 20px 30px 40px;
+          color: $black-color;
+
+          @include tablet {
+            padding: 20px;
+          }
+          @include mobile {
+            align-items: flex-start;
+            padding: 0;
+          }
+
+
+          &:nth-child(1) {
+            width: 20.7%;
+
+            @include desktop {
+              width: 25%;
+            }
+            @include mobile {
+              grid-column: 1/2;
+              grid-row: 1/4;
+              width: unset;
+            }
+          }
+
+          &:nth-child(2) {
+            width: 28.1%;
+            @include desktop {
+              width: 25%;
+            }
+            @include mobile {
+              grid-column: 2/3;
+              grid-row: 1/2;
+              margin-bottom: 2px;
+              width: unset;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 18px;
+            }
+          }
+
+          &:nth-child(3) {
+            width: 20.2%;
+            @include desktop {
+              width: 25%;
+            }
+            @include mobile {
+              grid-column: 2/3;
+              grid-row: 2/3;
+              margin-bottom: 10px;
+              width: unset;
+            }
+          }
+
+          &:nth-child(4) {
+            width: 31%;
+            background-color: #F5F5F5;
+            @include desktop {
+              width: 25%;
+            }
+            @include mobile {
+              grid-column: 2/3;
+              grid-row: 3/4;
+              width: unset;
+              background-color: transparent;
+
+              & a {
+                padding: 7px 20px;
+                background-color: $yellow-color-disabled;
+                border-radius: 30px;
+              }
+            }
+          }
+
+          &:not(:last-child) {
+            border-right: 1px solid $grey-color-disabled;
+
+            @include mobile {
+              border-right: none;
+            }
+          }
+
+          &.sign-up {
+            background-color: $yellow-color;
+            @include mobile {
+              background-color: transparent;
+
+              & a {
+                @include mobile {
+                  background-color: $yellow-color;
+                }
+              }
+            }
+          }
+
+          & a {
+            text-decoration: underline;
+
+            @include mobile {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
