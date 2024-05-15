@@ -5,6 +5,21 @@
 
 @import "./components/pages/events/top-content";
 @import "./components/pages/events/calendar";
-
+@import "./components/pages/events/photo-gallery";
+@import "./components/common/popup";
 @import "./components/common/footer";
+
+.page {
+  @include desktop {
+    margin-top: 266px;
+  }
+
+  @include tablet {
+    margin-top: 186px;
+  }
+
+  @include mobile {
+    margin-top: 128px;
+  }
+}
 

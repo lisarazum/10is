@@ -128,18 +128,18 @@ input {
 }
 
 .page {
-  margin-top: 160px;
+  margin-top: 268px;
   margin-bottom: 160px;
   @include desktop {
-    margin-top: 120px;
+    margin-top: 231px;
     margin-bottom: 120px;
   }
   @include tablet {
-    margin-top: 100px;
+    margin-top: 184px;
     margin-bottom: 100px;
   }
   @include mobile {
-    margin-top: 50px;
+    margin-top: 116px;
   }
 }
 
