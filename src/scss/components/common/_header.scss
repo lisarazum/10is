@@ -9,8 +9,12 @@
   transition: all .4s ease-in-out;
   z-index: 9;
 
+  @include tablet {
+    padding: 20px 0 18px;
+  }
+
   @include mobile {
-    padding: 14px 0;
+    padding: 15px 0;
   }
 
   &.sticky {
@@ -315,13 +319,23 @@
     }
 
     &-phone {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 22.64px;
       color: $white-color;
+
+      @include tablet {
+        font-size: 14px;
+        line-height: 17.61px;
+      }
 
       @include mobile {
         display: none;
       }
 
       & .icon {
+        margin-right: 12px;
         max-width: 16px;
         max-height: 16px;
         fill: $white-color;
@@ -408,6 +422,40 @@
   }
   & .burger-line-three {
     animation: animate-line-3-rev 0.7s ease-in-out forwards;
+  }
+}
+
+.layout .header {
+  border-color: $black-color;
+
+  &__logo {
+    &--white {
+      display: none;
+    }
+
+    &--black {
+      display: flex;
+    }
+  }
+
+  &__nav-link {
+    color: $black-color;
+
+    &:hover {
+      color: $yellow-color;
+    }
+
+    &.has-submenu > .header__nav-link-inner:before {
+      background: $black-color;
+    }
+  }
+
+  &__contacts-phone {
+    color: $black-color;
+
+    & .icon {
+      fill: $black-color;
+    }
   }
 }
 

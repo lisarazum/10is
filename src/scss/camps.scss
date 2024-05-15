@@ -1,0 +1,116 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+
+@import "./components/pages/main-page/hero";
+@import "./components/blocks/promo-block";
+@import "./components/blocks/program-block";
+@import "./components/pages/camps/camps-list";
+
+@import "./components/common/popup";
+@import "./components/common/footer";
+
+.promo-block {
+  &__link {
+    display: none;
+  }
+
+  &__content {
+    @include desktop {
+      padding: 50px 40px;
+    }
+    @include tablet {
+      padding: 37px 55px 38px 60px;
+    }
+    @include mobile {
+      padding: 31px 15px 31px 20px;
+    }
+    &:nth-child(1) {
+      margin-bottom: 124px;
+      @include desktop {
+        margin-bottom: 109px;
+      }
+      @include tablet {
+        margin-bottom: 304px;
+      }
+      @include mobile {
+        margin-bottom: 216px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 100px;
+      @include desktop {
+        margin-bottom: 110px;
+      }
+      @include tablet {
+        margin-bottom: 310px;
+      }
+      @include mobile {
+        margin-bottom: 217px;
+      }
+    }
+  }
+
+  &__img {
+    &.img1 {
+      @include tablet {
+        top: 14%;
+      }
+      @include mobile {
+        top: 15%;
+      }
+    }
+    &.img2 {
+      top: 23%;
+      @include desktop {
+        top: 21%;
+      }
+      @include tablet {
+        top: 60.7%;
+      }
+      @include mobile {
+        top: 63.7%;
+      }
+    }
+
+    &.img3 {
+      top: 34.6%;
+      left: 4.2%;
+      @include desktop {
+        top: 36.6%;
+        left: 6.2%;
+      }
+      @include tablet {
+        top: 18.5%;
+        left: 11.2%;
+      }
+      @include mobile {
+        top: 21.5%;
+        left: 5.2%;
+      }
+    }
+    &.img4 {
+      bottom: 3.5%;
+      @include desktop {
+        bottom: 7.5%;
+        max-width: 306.86px;
+        max-height: 372.27px;
+      }
+      @include tablet {
+        bottom: 24%;
+        right: 12%;
+        max-width: 249px;
+        max-height: 302px;
+      }
+      @include mobile {
+        bottom: 28.5%;
+        right: 5%;
+        max-width: 143px;
+        max-height: 173px;
+      }
+    }
+  }
+}
+

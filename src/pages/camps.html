@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('../partials/common/head.html', {
+    'title': 'Кэмпы',
+    'style': 'camps',
+    })
+<body>
+  <div class="layout">
+    @include('../partials/common/header.html')
+    <main class="main">
+      @include('../partials/pages/main-page/hero.html')
+
+      @include('../partials/blocks/promo-block.html', {
+        'title': 'Теннисные кэмпы 10is',
+        'text1': 'Кэмп - путешествие по России или за границу с насыщенной программой на 3-10 дней, объединяющей в себе теннис, приключения и самых лучших людей! ',
+        'text2': 'Мы организовали более 30 кэмпов в разных уголках планеты. На нашем счету сотни довольных участников и непреодолимое желание продолжать открывать для вас мир тенниса!',
+        'text3': 'На кэмпе вас ждёт: <br><br> 2 тренировки в день по 1,5 часа, теннисные турниры, уроки по технике и тактике, теннисные квизы. А еще новые знакомства, поездки в красивейшие места, вечеринки и танцы до упаду, покер, мафия, настолки и душевные вечера в компании друзей',
+        'img1': '/img/camps/1.png',
+        'img2': '/img/camps/2.png',
+        'img3': '/img/camps/3.png',
+        'img4': '/img/camps/4.png',
+      })
+
+      @include('../partials/pages/camps/camps-list.html')
+
+      @include('../partials/blocks/program-blocks.html')
+    </main>
+    @include('../partials/common/footer.html')
+  </div>
+  <script src="/js/camps.js"></script>
+</body>
+</html>
