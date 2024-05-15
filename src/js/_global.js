@@ -9,13 +9,9 @@ const header = new Header(headerEl, 0, burgerEl, menuEl)
 const showPopupButtons = document.querySelectorAll('.js-show-popup')
 const thanksPopupEl = document.querySelector('.js-popup[data-popup="thanks"]')
 const thanksPopup = new Popup(thanksPopupEl)
-// const applicationPopupEl = document.querySelector('.js-popup[data-popup="application"]')
-// const applicationPopup = new Popup(applicationPopupEl)
+const applicationPopupEl = document.querySelector('.js-popup[data-popup="application"]')
+const applicationPopup = new Popup(applicationPopupEl)
 header.Init(html);
-
-function dispatchFormSendEvent(){
-  document.dispatchEvent(new CustomEvent('form-send'))
-}
 
 if(showPopupButtons){
   showPopupButtons.forEach(loopButton => {
@@ -24,9 +20,9 @@ if(showPopupButtons){
         case 'thanks':
           thanksPopup.showPopup(e);
           break;
-        // case 'application':
-        //   applicationPopup.showPopup(e);
-        //   break;
+        case 'application':
+          applicationPopup.showPopup(e);
+          break;
       }
     })
   })

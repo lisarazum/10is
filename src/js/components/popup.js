@@ -2,7 +2,7 @@ export default class Popup {
   constructor(el){
     this.element = el;
   }
-  showPopup(e = null, button = null){
+  showPopup(e = null){
     if(e){
       e.preventDefault();
     }

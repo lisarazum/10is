@@ -80,66 +80,6 @@
     @include tablet {
       gap: 30px;
     }
-    &__label {
-      position: relative;
-      padding-bottom: 10px;
-      border-bottom: 1px solid $black-color;
-
-      & input {
-        width: 100%;
-        background-color: transparent;
-        outline: none;
-        @include mobile {
-          text-align: center;
-        }
-        &::placeholder {
-          color: $black-color;
-          opacity: .4;
-        }
-      }
-
-      & select {
-        color: $black-color;
-        opacity: .4;
-        background-color: transparent;
-        outline: none;
-        @include mobile {
-          display: flex;
-          margin: 0 auto;
-        }
-      }
-
-      & textarea {
-        position: relative;
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 22px;
-        background-color: transparent;
-        white-space: pre-wrap;
-        outline: none;
-
-        &::placeholder {
-          color: $black-color;
-          opacity: .4;
-        }
-        @include mobile {
-          text-align: center;
-        }
-
-        &~.triangle {
-          position: absolute;
-          bottom: 12px;
-          right: 0;
-          display: block;
-          width: 10px;
-          height: 10px;
-          border: 5px solid transparent;
-          border-right: 5px solid $black-color;
-          border-bottom: 5px solid $black-color;
-        }
-      }
-    }
 
     &-bottom {
       display: flex;

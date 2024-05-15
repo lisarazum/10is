@@ -5,6 +5,46 @@
         <use xlink:href="img/sprite.svg#close"></use>
       </svg>
     </div>
-
+    <div class="popup__info">
+      <p class="popup__info-subtitle h4">Готовы?</p>
+      <h2 class="popup__info-title h2">Заполните заявку</h2>
+      <p class="popup__info-text b1">
+        Оставьте свои данные и менеджер свяжется с вами
+      </p>
+    </div>
+    <form action="post" class="popup__form">
+      <div class="form-group">
+        <label class="p3 registration-form__label form-control">
+          <input type="text" placeholder="Имя" required>
+        </label>
+        <label class="p3 registration-form__label form-control">
+          <input type="email" placeholder="Электронная почта" required class="js-control-email">
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="p3 registration-form__label form-control">
+          <input type="tel" placeholder="Номер телефона" required class="js-control-phone">
+        </label>
+        <label class="p3 registration-form__label form-control">
+          <select name="experience" class="js-registration-experience" aria-label="Опыт">
+            <option value="" selected>Опыт</option>
+            <option value="3 года">3 года</option>
+            <option value="4 года">4 года</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="p3 registration-form__label form-control">
+          <textarea name="" placeholder="Пожелания" class="p3" data-autoresize rows="1"></textarea>
+          <span class="triangle"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <span class="p4 popup__form-text">Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;<a href="#">условиями пользовательского соглашения</a></span>
+        <button class="yellow-btn popup__form-button" type="submit">
+          Отправить
+        </button>
+      </div>
+    </form>
   </div>
 </div>

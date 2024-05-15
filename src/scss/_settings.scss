@@ -178,3 +178,73 @@ input {
     fill: $yellow-color;
   }
 }
+
+.form-control{
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $black-color;
+
+  & input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+
+    &::placeholder {
+      color: $black-color;
+      opacity: .4;
+    }
+  }
+
+  & select {
+    color: $black-color;
+    opacity: .4;
+    background-color: transparent;
+    outline: none;
+
+  }
+
+  & textarea {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 22px;
+    background-color: transparent;
+    white-space: pre-wrap;
+    outline: none;
+
+    &::placeholder {
+      color: $black-color;
+      opacity: .4;
+    }
+
+    &~.triangle {
+      position: absolute;
+      bottom: 12px;
+      right: 0;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 5px solid transparent;
+      border-right: 5px solid $black-color;
+      border-bottom: 5px solid $black-color;
+    }
+  }
+}
+
+.form-group{
+  display: flex;
+  gap: 40px;
+
+  @include tablet{
+    flex-direction: column;
+  }
+
+  @include mobile{
+    gap: 30px;
+  }
+
+  & .form-control{
+    flex: 1 1;
+  }
+}
