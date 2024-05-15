@@ -63,6 +63,7 @@
     @include mobile{
       padding: 20px;
       max-width: 92.5vw;
+      border-radius: 30px;
     }
   }
 
@@ -73,6 +74,108 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
+    }
+  }
+
+  &.application-popup{
+    & .popup{
+      &__inner{
+        padding: 129px 100px 60px;
+        display: flex;
+        justify-content: space-between;
+
+        @include desktop {
+          padding: 100px 80px;
+          gap: 60px;
+        }
+
+        @include tablet{
+          padding: 60px 40px;
+          flex-direction: column;
+        }
+
+        @include mobile{
+          padding: 40px 20px;
+          gap: 40px;
+        }
+      }
+
+      &__form{
+        max-width: 642px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include desktop {
+          max-width: 560px;
+          width: 54.66%;
+        }
+
+        @include tablet{
+          max-width: 100%;
+          width: 100%;
+          gap: 40px;
+        }
+
+        @include mobile{
+          gap: 30px;
+        }
+
+        & .form-group{
+          &:last-of-type{
+            align-items: center;
+            align-self: flex-end;
+            gap: 20px;
+
+            @include tablet{
+              flex-direction: row-reverse;
+              align-self: center;
+            }
+
+            @include mobile{
+              margin-top: 10px;
+              flex-direction: column-reverse;
+              gap: 15px;
+            }
+          }
+        }
+        &-text{
+          max-width: 317px;
+          text-align: right;
+          opacity: 0.5;
+
+          @include tablet{
+            text-align: left;
+          }
+
+          @include mobile{
+            max-width: 250px;
+            text-align: center;
+          }
+        }
+      }
+
+      &__info{
+        &-subtitle{
+          margin-bottom: 10px;
+
+          @include mobile{
+            margin-bottom: 5px;
+          }
+        }
+
+        &-title{
+          margin-bottom: 20px;
+          @include mobile{
+            margin-bottom: 10px;
+          }
+        }
+
+        &-text{
+          max-width: 372px;
+        }
+      }
     }
   }
 }
