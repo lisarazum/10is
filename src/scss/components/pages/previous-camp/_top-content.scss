@@ -1,0 +1,69 @@
+.top-content {
+  margin-bottom: 160px;
+  @include desktop {
+    margin-bottom: 120px;
+  }
+  @include tablet {
+    margin-bottom: 102px;
+  }
+  @include mobile {
+    margin: 100px;
+  }
+
+  &__block {
+    display: flex;
+    gap: 180px;
+    @include desktop {
+      gap: 127px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 50px;
+    }
+    @include mobile {
+      gap: 40px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 660px;
+    @include desktop {
+      max-width: 533px;
+    }
+    @include tablet {
+      max-width: unset;
+    }
+  }
+
+  &__tab {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: $black-color;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    color: $black-color;
+  }
+
+  &__img {
+    height: 100%;
+    & img {
+      border-radius: 40px;
+
+      @include mobile {
+        border-radius: 30px;
+      }
+    }
+  }
+}

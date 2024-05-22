@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('../partials/common/head.html', {
+    'title': 'Теннисный кэмп Турция',
+    'style': 'previous-camp',
+    })
+<body>
+  <div class="layout">
+    @include('../partials/common/header.html')
+    <main class="main page">
+      @include('../partials/pages/previous-camp/top-content.html')
+
+      @include('../partials/photo-gallery/photo-gallery.html', {
+        'img1': '/img/camp/camp-1.png',
+        'img2': '/img/camp/camp-2.png',
+        'img3': '/img/camp/camp-3.png',
+        'img4': '/img/camp/camp-4.png',
+        'img5': '/img/camp/camp-5.png',
+        'img6': '/img/camp/camp-6.png',
+        'img7': '/img/camp/camp-7.png',
+        'img8': '/img/camp/camp-8.png',
+      })
+
+      @include('../partials/photo-gallery/reviews.html', {
+        'img1': '/img/camp/review-1.png',
+        'img2': '/img/camp/review-2.png',
+        'img3': '/img/camp/review-3.png',
+        'img4': '/img/camp/review-4.png',
+      })
+
+
+    </main>
+    @include('../partials/common/footer.html')
+  </div>
+  <script src="/js/previous-camp.js"></script>
+</body>
+</html>

@@ -70,10 +70,12 @@ input {
   padding: 0 15px;
   max-width: calc(1640px + 30px);
   @include desktop {
-    max-width: calc(1290px + 30px);
+    padding: 0 75px;
+    // max-width: calc(1290px + 30px);
   }
   @include tablet {
-    max-width: calc(690px + 30px);
+    padding: 0 39px;
+    // max-width: calc(690px + 30px);
   }
   @include mobile {
     padding: 0 10px;

@@ -13,7 +13,16 @@
 
       @include('../partials/pages/events/calendar.html')
 
-      @include('../partials/pages/events/photo-gallery.html')
+      @include('../partials/photo-gallery/photo-gallery.html', {
+        'img1': '/img/events/1.png',
+        'img2': '/img/events/2.png',
+        'img3': '/img/events/3.png',
+        'img4': '/img/events/4.png',
+        'img5': '/img/events/5.png',
+        'img6': '/img/events/6.png',
+        'img7': '/img/events/7.png',
+        'img8': '/img/events/8.png',
+      })
 
     </main>
     @include('../partials/common/footer.html')

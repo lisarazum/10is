@@ -1,0 +1,46 @@
+.reviews {
+  &__block {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pre-title {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    width: fit-content;
+  }
+
+  &__content {
+    display: flex;
+    gap: 40px;
+    @include desktop {
+      gap: 32px;
+    }
+    @include tablet {
+      gap: 17px;
+    }
+    @include mobile {
+
+    }
+  }
+  &__photos-link {
+    width: calc(100% / 4);
+  }
+}
