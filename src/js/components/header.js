@@ -9,7 +9,7 @@ export default class Header{
   Init(html){
     document.addEventListener('wheel', (e) => {
       if (e.wheelDeltaY < 0 && !html.classList.contains('lock-scroll')) {
-        this.OnScrollDowm();
+        this.OnScrollDown();
       } else {
         if (window.pageYOffset > this.basePosition) {
           this.OnScrollTop();
@@ -26,7 +26,7 @@ export default class Header{
     document.addEventListener('touchend', (e) => {
       this.finalPoint = e.changedTouches[0];
       if (this.finalPoint.pageY < this.initialPoint.pageY) {
-        this.OnScrollDowm();
+        this.OnScrollDown();
       } else {
         if (window.pageYOffset > this.basePosition) {
           this.OnScrollTop();
@@ -40,7 +40,7 @@ export default class Header{
       this.burger.addEventListener('click', () => this.ToggleBurgerActivity())
     }
   }
-  OnScrollDowm(){
+  OnScrollDown(){
     this.element.classList.add('sticky');
     this.element.classList.remove('visible');
     if(this.burger != null && this.burgerMenu != null){
