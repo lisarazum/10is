@@ -1,0 +1,20 @@
+@import "settings";
+
+.form{
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &-group{
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  &-control{
+    width: 100%;
+  }
+  &-button{
+    padding: 18px 47px 17px;
+  }
+}
