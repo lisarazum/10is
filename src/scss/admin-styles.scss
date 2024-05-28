@@ -1,5 +1,14 @@
 @import "settings";
 
+body {
+  background: #f0f0f1;
+  color: #3c434a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1.4em;
+  min-width: 600px;
+}
+
 .form{
   &-wrapper{
     display: flex;
@@ -15,6 +24,6 @@
     width: 100%;
   }
   &-button{
-    padding: 18px 47px 17px;
+    max-width: max-content;
   }
 }
