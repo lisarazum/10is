@@ -1,0 +1,59 @@
+.reviews {
+  &__block {
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+  &__title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pre-title {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    width: fit-content;
+
+    @include mobile {
+      padding: 14px 35px 13px;
+    }
+  }
+
+  &__content {
+    @include mobile {
+      padding-bottom: 25px;
+    }
+
+    & .swiper-pagination-bullets {
+      bottom: 0;
+
+      & .swiper-pagination-bullet {
+        margin: 0 5px;
+        width: 5px;
+        height: 5px;
+        background-color: #CECECE;
+
+        &.swiper-pagination-bullet-active {
+          background-color: #1C1C1C;
+        }
+      }
+    }
+  }
+}

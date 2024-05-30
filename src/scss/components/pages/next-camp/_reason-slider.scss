@@ -1,0 +1,195 @@
+.reason {
+  margin-bottom: 160px;
+  @include desktop {
+    margin-bottom: 120px;
+  }
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 700px;
+    padding: 122px;
+
+    @include desktop {
+      padding: 110px;
+      min-height: 510px;
+    }
+    @include tablet {
+      padding: 80px 60px;
+      min-height: 380px;
+    }
+    @include mobile {
+      padding: 48px 13px;
+      min-height: 350px;
+    }
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: fit-content;
+    color: $white-color;
+    background-color: $black-color;
+    border-radius: 50px;
+
+    @include desktop {
+      margin-bottom: 15px;
+    }
+    @include tablet {
+      margin-bottom: 10px;
+      padding: 10px 20px;
+    }
+    @include mobile {
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    & svg {
+      margin-left: 10px;
+      width: 45px;
+      height: 10px;
+      fill: $white-color;
+    }
+  }
+
+  &__text {
+    max-width: 1209px;
+    color: $white-color;
+    text-align: center;
+
+    @include desktop {
+      max-width: 831px;
+    }
+    @include tablet {
+      max-width: 686px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: $white-color;
+    border-radius: 100%;
+
+    @include desktop {
+      width: 35px;
+      height: 35px;
+    }
+
+    @include tablet {
+      width: 23px;
+      height: 23px;
+    }
+
+    @include mobile {
+      width: 25px;
+      height: 25px;
+    }
+
+    &::after {
+      font-size: 15px;
+      color: $black-color;
+
+      @include desktop {
+        font-size: 12px;
+      }
+
+      @include tablet {
+        font-size: 8px;
+      }
+    }
+
+    &.swiper-button-next {
+      right: 50px;
+      @include desktop {
+        right: 38px;
+      }
+      @include tablet {
+        right: 20px;
+      }
+      @include mobile {
+        right: 9px;
+      }
+    }
+
+    &.swiper-button-prev {
+      left: 50px;
+      @include desktop {
+        left: 38px;
+      }
+      @include tablet {
+        left: 20px;
+      }
+      @include mobile {
+        left: 9px;
+      }
+    }
+  }
+
+  &__pagination {
+    &.swiper-pagination-bullets {
+      display: flex;
+      gap: 20px;
+      bottom: 50px;
+      left: 50%;
+      padding: 20px;
+      width: fit-content;
+      translate: -50% 0;
+      background-color: $black-color;
+      border-radius: 50px;
+
+      @include desktop {
+        bottom: 40px;
+      }
+      @include tablet {
+        bottom: 30px;
+        padding: 10px;
+        gap: 10px;
+      }
+      @include mobile {
+        bottom: 10px;
+        padding: 10px 15px;
+      }
+
+      & .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 1px solid $white-color;
+        opacity: 1;
+        @include desktop {
+          width: 10px;
+          height: 10px;
+        }
+        @include mobile {
+          width: 8px;
+          height: 8px;
+        }
+        &.swiper-pagination-bullet-active {
+          background-color: $white-color;
+        }
+      }
+    }
+
+  }
+}

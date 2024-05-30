@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   @include('../partials/common/head.html', {
-    'title': 'Взрослые тренировка',
-    'style': 'trainings-adults',
+    'title': 'Детские тренировка',
+    'style': 'trainings-kids',
     })
 <body>
   <div class="layout">
@@ -10,16 +10,16 @@
     <main class="main page">
 
       @include('../partials/pages/trainings/hero.html', {
-        'title1': 'Взрослые групповые',
-        'title2': 'занятия по теннису',
+        'title1': 'Групповые занятия',
+        'title2': 'по теннису для детей',
         'text': 'Занимайтесь теннисом в группе из шести человек. Весело, активно и продуктивно',
-        'img1': '/img/trainings-adults/hero-1.jpg',
-        'img2': '/img/trainings-adults/hero-2.jpg',
-        'img3': '/img/trainings-adults/hero-3.jpg',
+        'img1': '/img/trainings-kids/hero-1.png',
+        'img2': '/img/trainings-kids/hero-2.png',
+        'img3': '/img/trainings-kids/hero-3.png',
       })
 
       @include('../partials/blocks/black-block.html', {
-        'title': 'Преимущества', postTitle: 'детских групповых занятий',
+        'title': 'Преимущества', postTitle: 'групповых занятий',
       })
 
       @include('../partials/pages/trainings/training-steps.html', {
@@ -32,9 +32,9 @@
         'number3': '03',
         'title3': 'Игра',
         'text3': 'Во второй половине тренировки группа отрабатывает технические элементы в игре на счет. Это могут быть командные упражнения, парная или одиночная игра',
-        'number4': '',
-        'title4': '',
-        'text4': '',
+        'number4': '04',
+        'title4': 'Заминка',
+        'text4': 'Завершающая часть тренировки, которая включает в себя растяжку и упражнения, направленные на восстановление после физической нагрузки',
       })
 
       @include('../partials/blocks/black-block.html', {
@@ -43,7 +43,7 @@
 
       @include('../partials/locations/locations.html')
 
-      @include('../partials/prices/prices.html')
+      @include('../partials/prices/prices-four-grid.html')
 
       @include('../partials/reviews/reviews.html')
 
@@ -51,6 +51,6 @@
     </main>
     @include('../partials/common/footer.html')
   </div>
-  <script src="/js/trainings-adults.js"></script>
+  <script src="/js/trainings-kids.js"></script>
 </body>
 </html>

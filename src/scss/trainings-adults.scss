@@ -2,12 +2,29 @@
 
 // подключения компонентов страницы
 @import "./components/common/header";
-@import "./components/pages/trainings-adults/hero";
+@import "./components/pages/trainings/hero";
 @import "./components/blocks/black-block";
-@import "./components/pages/trainings-adults/steps";
+@import "./components/pages/trainings/steps";
 @import "./components/locations/locations";
 @import "./components/prices/prices";
 @import "./components/reviews/reviews";
 @import "./components/faq/faq";
 @import "./components/common/popup";
 @import "./components/common/footer";
+
+// steps
+.steps {
+  &-list {
+    &__item {
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  &__right {
+    & img {
+      display: none;
+    }
+  }
+}

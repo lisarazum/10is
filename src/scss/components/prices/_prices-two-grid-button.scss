@@ -1,0 +1,101 @@
+.prices {
+  margin-bottom: 160px;
+  @include desktop {
+    margin-bottom: 120px;
+  }
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    max-width: 893px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__pre-title {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__post-title {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 60px;
+    @include desktop {
+      gap: 30px;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &-item {
+    padding: 60px;
+    width: 50%;
+    border: 1px solid $black-color;
+    border-radius: 40px;
+
+    @include tablet {
+      padding: 50px 10px 50px 30px;
+    }
+    @include mobile {
+      padding: 40px 30px;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    &.black {
+      background-color: $black-color;
+
+      & .prices-item__title,
+      & .prices-item__post-title,
+      & .prices-item__price {
+        color: $white-color;
+      }
+    }
+
+    &__title {
+      margin-bottom: 5px;
+    }
+
+    &__titles {
+      margin-bottom: 40px;
+      @include tablet {
+        margin-bottom: 50px;
+      }
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}

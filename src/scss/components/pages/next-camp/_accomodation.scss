@@ -1,0 +1,179 @@
+.accomodation {
+  margin-bottom: 160px;
+
+  @include desktop {
+    margin-bottom: 120px;
+  }
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include desktop {
+      gap: 30px;
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: 50px;
+    }
+    @include mobile {
+      gap: 40px;
+    }
+  }
+
+  &__left {
+    max-width: 700px;
+
+    @include desktop {
+      max-width: 630px;
+      width: 50%;
+    }
+
+    @include tablet {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    @include big-desktop {
+      gap: 16px;
+    }
+    @include tablet {
+      gap: 17px;
+    }
+    @include mobile {
+      gap: 7px;
+    }
+
+    &-slider,
+    &-mini-slider {
+      width: 100%;
+    }
+
+    &-slider {
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+
+        @include mobile {
+          border-radius: 20px;
+        }
+      }
+    }
+
+    &-mini-slider {
+      & img {
+        max-height: 123px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+
+        @include desktop {
+          max-height: 110px;
+        }
+
+        @include tablet {
+          max-height: 121px;
+        }
+
+        @include mobile {
+          max-height: 52px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 800px;
+    height: 100%;
+
+    @include desktop {
+      max-width: 627px;
+      width: 50%;
+    }
+    @include tablet {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    max-width: 70%;
+
+    @include mobile {
+      margin-bottom: 20px;
+      max-width: unset;
+    }
+  }
+
+  &-price {
+    margin-bottom: 30px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+
+    &__list {
+      padding-left: 29px;
+
+      @include desktop {
+        padding-left: 24px;
+      }
+      @include mobile {
+        padding-left: 19px;
+      }
+    }
+
+    &__item {
+      &::marker {
+        font-size: 15px;
+
+        @include mobile {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding: 18px 63px 17px;
+    width: fit-content;
+
+    @include desktop {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @include mobile {
+      padding: 14px 60px 13px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

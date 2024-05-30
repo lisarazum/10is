@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('../partials/common/head.html', {
+    'title': 'Теннисные сборы в Moscow Country Club',
+    'style': 'next-camp',
+    })
+<body>
+  <div class="layout">
+    @include('../partials/common/header.html')
+    <main class="main page">
+      @include('../partials/pages/next-camp/top-content.html')
+
+      @include('../partials/pages/next-camp/promo.html')
+
+      @include('../partials/pages/next-camp/accomodation.html')
+
+      @include('../partials/pages/next-camp/reason-slider.html')
+
+      @include('../partials/prices/prices-two-grid-button.html')
+
+      @include('../partials/pages/next-camp/program.html')
+
+      @include('../partials/pages/next-camp/coaches.html')
+
+      @include('../partials/reviews/reviews.html')
+
+      @include('../partials/photo-gallery/photo-gallery.html', {
+        'img1': '/img/camp/camp-1.png',
+        'img2': '/img/camp/camp-2.png',
+        'img3': '/img/camp/camp-3.png',
+        'img4': '/img/camp/camp-4.png',
+        'img5': '/img/camp/camp-5.png',
+        'img6': '/img/camp/camp-6.png',
+        'img7': '/img/camp/camp-7.png',
+        'img8': '/img/camp/camp-8.png',
+      })
+
+      @include('../partials/blocks/new-camp-block.html')
+
+      @include('../partials/faq/faq.html')
+
+    </main>
+    @include('../partials/common/footer.html')
+  </div>
+  <script src="/js/next-camp.js"></script>
+</body>
+</html>

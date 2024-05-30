@@ -227,3 +227,12 @@ p {
     }
   }
 }
+
+.date-tab {
+  display: block;
+  padding: 10px 20px;
+  width: fit-content;
+  color: $black-color;
+  background-color: $yellow-color;
+  border-radius: 50px;
+}
