@@ -6,3 +6,4 @@ package-lock.json
 /.idea/modules.xml
 /.idea/deployment.xml
 /.idea/10is.iml
+/.vscode

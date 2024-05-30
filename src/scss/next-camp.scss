@@ -1,10 +1,19 @@
 @import "settings";
 
 // подключения компонентов страницы
+@import "./components/common/timer";
 @import "./components/common/header";
-@import "./components/pages/previous-camp/top-content";
+@import "./components/pages/next-camp/top-content";
+@import "./components/pages/next-camp/promo";
+@import "./components/pages/next-camp/accomodation";
+@import "./components/pages/next-camp/reason-slider";
+@import "./components/prices/prices-two-grid-button";
+@import "./components/pages/next-camp/program";
+@import "./components/pages/next-camp/coaches";
+@import "./components/reviews/reviews";
 @import "./components/photo-gallery/photo-gallery";
-@import "./components/photo-gallery/reviews";
+@import "./components/blocks/new-camp-block";
+@import "./components/faq/faq";
 @import "./components/common/footer";
 
 .photo-gallery {

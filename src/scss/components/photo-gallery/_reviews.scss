@@ -21,26 +21,39 @@
 
   &__title {
     margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
   &__link {
     width: fit-content;
+
+    @include mobile {
+      padding: 14px 35px 13px;
+    }
   }
 
   &__content {
-    display: flex;
-    gap: 40px;
-    @include desktop {
-      gap: 32px;
-    }
-    @include tablet {
-      gap: 17px;
-    }
     @include mobile {
-
+      padding-bottom: 25px;
     }
-  }
-  &__photos-link {
-    width: calc(100% / 4);
+
+    & .swiper-pagination-bullets {
+      bottom: 0;
+
+      & .swiper-pagination-bullet {
+        margin: 0 5px;
+        width: 5px;
+        height: 5px;
+        background-color: #CECECE;
+
+        &.swiper-pagination-bullet-active {
+          background-color: #1C1C1C;
+        }
+      }
+    }
   }
 }

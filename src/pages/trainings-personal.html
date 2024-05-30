@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @include('../partials/common/head.html', {
+    'title': 'Индивидуальные тренировки',
+    'style': 'trainings-personal',
+    })
+<body>
+  <div class="layout">
+    @include('../partials/common/header.html')
+    <main class="main page">
+
+      @include('../partials/pages/trainings/hero.html', {
+        'title1': 'Индивидуальные',
+        'title2': 'занятия по теннису',
+        'text': 'Персональные тренировки по теннису с тренером. Удобный график занятий в соответсвии с удобным временем и индивидуальная программа тренировки в отличии от групповой. Углубленная проработка техники даёт лучший результат',
+        'img1': '/img/trainings-personal/hero-1.jpg',
+        'img2': '/img/trainings-personal/hero-2.jpg',
+        'img3': '/img/trainings-personal/hero-3.jpg',
+      })
+
+      @include('../partials/blocks/black-block.html', {
+        'title': 'Преимущества', postTitle: 'индивидуальных занятий',
+      })
+
+      @include('../partials/pages/trainings/training-steps.html', {
+        'number1': '01',
+        'title1': 'Разминка',
+        'text1': 'Первые 5-10 минут занятия посвящены активной разминке. Включает в себя пробежку, вращения суставов, игровые и беговые упражнения с мячом, лесенку',
+        'number2': '02',
+        'title2': 'Техника',
+        'text2': 'Отработка упражнений по составленному индивидуальному плану. Изучение технических элементов, таких как удары справа/слева, правильный подход к мячу, подача, удары слета/смеш, резанные и укороченные удары, а также изучение тонкостей создания собственной стратегии игры',
+        'number3': '03',
+        'title3': 'Игра',
+        'text3': 'Практика технических элементов во время игры на счет с тренером',
+        'number4': '04',
+        'title4': 'Заминка',
+        'text4': 'Завершающая часть тренировки, которая включает в себя растяжку и упражнения, направленные на восстановление после физической нагрузки',
+      })
+
+      @include('../partials/blocks/black-block.html', {
+        'title': '3 причины', postTitle: 'выбрать наши занятия',
+      })
+
+      @include('../partials/locations/locations.html')
+
+      @include('../partials/prices/prices-two-grid.html')
+
+      @include('../partials/reviews/reviews.html')
+
+      @include('../partials/faq/faq.html')
+    </main>
+    @include('../partials/common/footer.html')
+  </div>
+  <script src="/js/trainings-personal.js"></script>
+</body>
+</html>

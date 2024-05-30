@@ -1,0 +1,408 @@
+.coaches {
+  margin-bottom: 160px;
+
+  @include desktop {
+    margin-bottom: 120px;
+  }
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    margin-bottom: 100px;
+    text-align: center;
+
+    @include desktop {
+      margin-bottom: 97px;
+    }
+    @include tablet {
+      margin-bottom: 60px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1513px;
+
+    @include mobile {
+      max-width: 300px;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      gap: 40px;
+      width: 50%;
+
+      @include desktop {
+        gap: 60px
+      }
+
+      @media (max-width: 1320px) {
+        width: 100%;
+      }
+
+      @media (max-width: 650px) {
+        gap: 45px;
+      }
+      @include mobile {
+        justify-content: space-between;
+        gap: 0;
+        max-width: 300px;
+      }
+
+      & img {
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+      }
+
+      &:first-child {
+        & img {
+          width: 320px;
+          height: 320px;
+
+          @include desktop {
+            width: unset;
+            height: unset;
+            max-width: 300px;
+            max-height: 300px;
+          }
+
+          @media (max-width: 1320px) {
+            max-width: 400px;
+            max-height: 400px;
+          }
+
+          @include tablet {
+            max-width: 300px;
+            max-height: 300px;
+          }
+
+          @media (max-width: 650px) {
+            max-width: 140px;
+            max-height: 140px;
+          }
+        }
+
+        @media (max-width: 1320px) {
+          order: 1;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-top: 45px;
+        width: 45%;
+
+        @include desktop {
+          margin-top: 31px;
+          width: 43%;
+        }
+        @media (max-width: 1320px) {
+          margin-top: 0;
+          order: 3;
+          width: 100%;
+        }
+        @include tablet {
+          margin-top: 56px;
+        }
+        @media (max-width: 650px) {
+          margin-top: -25px;
+        }
+        @include mobile {
+          margin-top: 40px;
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        & img {
+          width: 300px;
+          height: 300px;
+
+          @include desktop {
+            width: unset;
+            height: unset;
+            max-width: 280px;
+            max-height: 280px;
+          }
+
+          @media (max-width: 1320px) {
+            max-width: 300px;
+            max-height: 300px;
+          }
+
+          @include tablet {
+            max-width: 280px;
+            max-height: 280px;
+          }
+
+          @media (max-width: 650px) {
+            max-width: 140px;
+            max-height: 140px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        flex-direction: row-reverse;
+        align-self: flex-start;
+        margin-top: -56px;
+        width: 47.5%;
+
+        @include desktop {
+          margin-top: -28px;
+        }
+        @media (max-width: 1320px) {
+          margin-top: 0;
+          width: 100%;
+          order: 2;
+        }
+        @include tablet {
+          margin-top: -100px;
+        }
+        @media (max-width: 650px) {
+          margin-top: -25px;
+        }
+        @include mobile {
+          margin-top: -36px;
+        }
+
+        & .coaches-list__content {
+          &::after {
+            right: -51%;
+            left: unset;
+
+            @include desktop {
+              right: -80%;
+            }
+            @media (max-width: 650px) {
+              right: -27%;
+            }
+            @include mobile {
+              right: -73%;
+              top: 39%;
+            }
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        margin-top: 115px;
+        width: 41%;
+        @include desktop {
+          width: 42%;
+        }
+        @media (max-width: 1320px) {
+          flex-direction: row-reverse;
+          margin-top: 0;
+          width: 100%;
+          order: 4;
+        }
+        @include tablet {
+          gap: 112px;
+          margin-top: -53px;
+        }
+
+        @media (max-width: 650px) {
+          margin-top: -25px;
+          gap: 45px;
+        }
+        @include mobile {
+          margin-top: -39px;
+          gap: 5px;
+        }
+
+        & .coaches-list__content::after {
+          left: -130px;
+
+          @media (max-width: 1320px) {
+            left: unset;
+            right: -165px;
+          }
+          @media (max-width: 650px) {
+            right: -70px;
+          }
+        }
+        & img {
+          width: 230px;
+          height: 230px;
+
+          @include desktop {
+            width: unset;
+            height: unset;
+            max-width: 200px;
+            max-height: 200px;
+          }
+
+          @media (max-width: 1320px) {
+            max-width: 300px;
+            max-height: 300px;
+          }
+
+          @include tablet {
+            max-width: 200px;
+            max-height: 200px;
+          }
+
+          @media (max-width: 650px) {
+            max-width: 140px;
+            max-height: 140px;
+          }
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        align-items: flex-end;
+
+        @include desktop {
+          & .coaches-list__content {
+            margin-bottom: 28px;
+          }
+        }
+
+        @include mobile {
+          & .coaches-list__content {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.unknown {
+        & .coaches-list__image {
+          position: relative;
+          display: flex;
+          flex-shrink: 0;
+          width: 230px;
+          height: 230px;
+          background-color: $black-color;
+          border-radius: 100%;
+          aspect-ratio: 1 / 1;
+
+          @include desktop {
+            width: 100%;
+            height: 100%;
+            max-width: 200px;
+            max-height: 200px;
+          }
+
+          @media (max-width: 1320px) {
+            max-width: 300px;
+            max-height: 300px;
+          }
+
+          @include tablet {
+            max-width: 200px;
+            max-height: 200px;
+          }
+
+          @media (max-width: 650px) {
+            max-width: 140px;
+            max-height: 140px;
+          }
+
+          &::after {
+            content: '?';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 110px;
+            color: $white-color;
+            translate: -50% -50%;
+          }
+        }
+
+        & img {
+          display: none;
+        }
+      }
+    }
+
+    &__image {
+      position: relative;
+      display: flex;
+      flex-shrink: 0;
+      border-radius: 100%;
+      aspect-ratio: 1 / 1;
+      filter: grayscale(1);
+      transition: all .4s cubic-bezier(0.68, 0.43, 0.19, 1);
+      cursor: pointer;
+
+      @include mobile {
+        filter: grayscale(0);
+      }
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    &__content {
+      position: relative;
+      display: flex;
+      gap: 40px;
+      @include desktop {
+        margin-top: 15px;
+      }
+      @include mobile {
+        margin-top: 0;
+        gap: 10px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: -51%;
+        width: 150px;
+        height: 2px;
+        background-color: $yellow-color;
+
+        @include desktop {
+          left: -58%;
+        }
+
+        @media (max-width: 650px) {
+          left: -22%;
+          width: 54px;
+        }
+
+        @include mobile {
+          top: 13px;
+          left: -52%;
+          width: 70px;
+        }
+      }
+
+      & svg {
+        width: 40px;
+        height: 40px;
+        fill: $yellow-color;
+        @include mobile {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &__name {
+      & span {
+        display: block;
+      }
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+  }
+}

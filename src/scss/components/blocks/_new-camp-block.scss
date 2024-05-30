@@ -1,0 +1,97 @@
+.promo-camp {
+  position: relative;
+  margin-bottom: 160px;
+  padding: 107px 100px 106px;
+  min-height: 577px;
+  border-radius: 30px;
+  overflow: hidden;
+
+  @include desktop {
+    margin-bottom: 120px;
+    padding: 74px 74px 73px;
+    min-height: 487px;
+  }
+
+  @include tablet {
+    margin-bottom: 100px;
+    padding: 75px 0 75px;
+    min-height: 433px;
+  }
+
+  @include mobile {
+    padding: 101px 0 100px;
+    min-height: 500px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $black-color;
+    opacity: .6;
+    z-index: -1;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 913px;
+  }
+
+  &__pre-title {
+    margin-bottom: 10px;
+    color: $white-color;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: $white-color;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .timer {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, .3);
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+    &__box[data-seconds] {
+      display: none;
+    }
+
+    &__val,
+    &__text {
+      color: $white-color;
+    }
+  }
+}

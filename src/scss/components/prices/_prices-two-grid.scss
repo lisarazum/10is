@@ -1,0 +1,214 @@
+.prices {
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__pre-title {
+    margin-bottom: 10px;
+    color: $grey-color;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $black-color;
+    text-align: center;
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__post-title {
+    color: $black-color;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 60px;
+    @include desktop {
+      gap: 30px;
+    }
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    min-height: 497px;
+    padding: 50px 60px;
+    width: calc(100% / 2);
+    border: 1px solid $black-color;
+    border-radius: 40px;
+
+    @include desktop {
+      min-height: 473px;
+    }
+    @include tablet {
+      padding: 50px 10px 50px 20px;
+      min-height: 425px;
+    }
+    @include mobile {
+      padding: 50px 20px;
+      width: 100%;
+      min-height: 401px;
+    }
+
+    &__titles {
+      margin-bottom: 40px;
+      @include tablet {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      color: $black-color;
+      @include mobile {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+
+    &__post-title {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22.64px;
+      color: $black-color;
+      @include desktop {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include tablet {
+        font-size: 15px;
+        line-height: 18px;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: auto;
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 16px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        background-color: $grey-color;
+        border-radius: 100%;
+        translate: 0 -50%;
+      }
+    }
+
+    &__price {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: $black-color;
+      white-space: nowrap;
+
+      @include mobile {
+        width: 100%;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 45px 17px;
+      width: 100%;
+      max-width: 425px;
+      @include desktop {
+        font-size: 20px;
+        line-height: 25px;
+      }
+      @include tablet {
+        padding: 13px 20px;
+        max-width: 229px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      @include mobile {
+        max-width: 229px;
+      }
+
+      & svg {
+        margin-top: 4px;
+        width: 16px;
+        height: 16px;
+        fill: $black-color;
+        @include desktop {
+          margin-top: 0;
+          width: 15px;
+          height: 15px;
+        }
+        @include tablet {
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: inline-block;
+    color: $black-color;
+    @include desktop {
+      font-size: 14px;
+      line-height: 17.61px;
+    }
+    @include mobile {
+      width: 100%;
+      max-width: 255px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    & a {
+      display: inline-block;
+      color: $grey-color;
+      border-bottom: 1px solid $grey-color;
+      @include desktop {
+        border: none;
+      }
+    }
+  }
+}
