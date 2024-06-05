@@ -1,0 +1,21 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+
+@import "./components/pages/team/team-grid";
+
+@import "./components/common/footer";
+
+.team {
+  &__title {
+    margin-bottom: 80px;
+
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+}

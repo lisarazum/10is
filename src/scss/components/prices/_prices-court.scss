@@ -1,0 +1,202 @@
+.prices {
+
+  &-top,
+  &-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &-top {
+    margin-bottom: 40px;
+  }
+
+  &-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $black-color;
+    text-align: center;
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__post-title {
+    color: $black-color;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+    @include desktop {
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    min-height: 289px;
+    padding: 50px;
+    width: calc(100% / 3);
+    border: 1px solid $black-color;
+    border-radius: 40px;
+
+    @include desktop {
+      min-height: 273px;
+    }
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 40px 50px;
+      width: 100%;
+      min-height: unset;
+    }
+    @include mobile {
+      flex-direction: column;
+      padding: 30px;
+
+    }
+
+    &.black {
+      background-color: $black-color;
+
+      & .prices-item {
+        &__title,
+        &__post-title,
+        &__price {
+          color: $white-color;
+        }
+
+        &__item {
+          color: $white-color;
+          &::before {
+            background-color: $yellow-color;
+          }
+        }
+      }
+    }
+
+    &__titles {
+      margin-bottom: 40px;
+      @include tablet {
+        order: 1;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      color: $black-color;
+      @include desktop {
+        font-size: 32px;
+        line-height: 30px;
+      }
+      @include mobile {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+
+    &__post-title {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22.64px;
+      color: $black-color;
+      @include desktop {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include mobile {
+        width: 100%;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: auto;
+      @include tablet {
+        order: 3;
+        width: 100%;
+      }
+      @include mobile {
+        margin-bottom: 20px;
+        order: 2;
+      }
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 16px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        background-color: $grey-color;
+        border-radius: 100%;
+        translate: 0 -50%;
+      }
+    }
+
+    &__price {
+      display: inline-block;
+      color: $black-color;
+      white-space: nowrap;
+      @include tablet {
+        order: 2;
+    }
+  }
+}
+  &-bottom {
+    & .prices-item {
+      width: 50%;
+      @include tablet {
+        width: 100%;
+      }
+
+      &__list {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
