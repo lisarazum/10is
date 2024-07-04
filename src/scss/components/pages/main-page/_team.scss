@@ -124,20 +124,30 @@
     }
 
     &__img {
-      border-radius: 20px;
-      aspect-ratio: 1 / 1;
       grid-column: 1 / 2;
       grid-row: 1 / 3;
-      @include tablet {
-        max-width: 27.5%;
-        min-width: 190px;
-      }
+
       @include mobile {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        max-width: unset;
-        min-width: 100px;
-        border-radius: 10px;
+      }
+
+      & img {
+        aspect-ratio: 1/1;
+        height: 240px;
+        width: 240px;
+        object-position: top;
+        border-radius: 20px;
+
+        @include desktop {
+          height: 190px;
+          width: 190px;
+        }
+        @include mobile {
+          height: 100px;
+          width: 100px;
+          border-radius: 10px;
+        }
       }
     }
 
@@ -218,8 +228,14 @@
       }
 
       &-text {
+        display: none;
         color: $white-color;
         cursor: default;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          display: flex;
+        }
         @include tablet {
           font-size: 16px;
           line-height: 20px;

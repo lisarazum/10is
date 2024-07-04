@@ -15,6 +15,8 @@ const sliderLocations = new Swiper('.js-locations-swiper', {
     }
   },
 
+  mousewheel: true,
+
   navigation: {
     nextEl: '.js-locations-btn-next',
     prevEl: '.js-locations-btn-prev',

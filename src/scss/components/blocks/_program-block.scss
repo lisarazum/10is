@@ -58,8 +58,21 @@
     }
 
     &:first-child {
+      padding: 43px 76px 42px 69px;
       background-color: $white-color;
       border: 1px solid $black-color;
+
+      @include desktop {
+        padding: 39px;
+      }
+
+      @include tablet {
+        padding: 39px 29px 45px 39px;
+      }
+
+      @include mobile {
+        padding: 29px 18px 29px 19px;
+      }
 
       & .programs-item__title,
       & .programs-item__text {
@@ -72,7 +85,21 @@
     }
 
     &:nth-child(2) {
+      padding: 33px 76px 32px 69px;
       background-color: $black-color;
+
+      @include desktop {
+        padding: 39px;
+      }
+
+      @include tablet {
+        padding: 39px 29px 47px 39px;
+      }
+
+      @include mobile {
+        padding: 39px 18px 29px 19px;
+      }
+
       & .programs-item__title,
       & .programs-item__text,
       & .programs-item__link span {
@@ -86,7 +113,21 @@
     }
 
     &:nth-child(3) {
+      padding: 36px 76px 36px 69px;
       background-color: $yellow-color;
+
+      @include desktop {
+        padding: 39px;
+      }
+
+      @include tablet {
+        padding: 39px 29px 45px 39px;
+      }
+
+      @include mobile {
+        padding: 29px 18px 29px 19px;
+      }
+
       & .programs-item__title,
       & .programs-item__text {
         color: $black-color;
@@ -98,8 +139,22 @@
     }
 
     &:nth-child(4) {
+      padding: 43px 76px 42px 69px;
       background-color: $white-color;
       border: 1px solid $yellow-color;
+
+      @include desktop {
+        padding: 39px;
+      }
+
+      @include tablet {
+        padding: 39px 29px 45px 39px;
+      }
+
+      @include mobile {
+        padding: 29px 18px 29px 19px;
+      }
+
       & .programs-item__title,
       & .programs-item__text {
         color: $black-color;

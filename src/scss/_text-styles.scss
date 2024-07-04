@@ -8,6 +8,7 @@ h4,
 h5,
 h6,
 p {
+  font-family: "Geometria", sans-serif, sans-serif;
   margin: 0;
 }
 
@@ -89,7 +90,7 @@ p {
 
 .p2 {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 25.16px;
   @include desktop {
     font-size: 18px;
@@ -147,6 +148,7 @@ p {
 .yellow-btn {
   display: inline-block;
   padding: 18px 47px 17px;
+  font-family: "Geometria", sans-serif, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 25.16px;

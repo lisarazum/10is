@@ -33,6 +33,10 @@
         &--black{
           display: block;
         }
+
+        &-text {
+          color: $black-color;
+        }
       }
 
       &__nav{
@@ -67,14 +71,50 @@
   }
 
   &__logo {
-    max-width: 89.5px;
-
-    @include mobile {
-      max-width: 71px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
     &--black {
       display: none;
+    }
+
+    & a {
+      display: flex;
+      width: 89.5px;
+      @include mobile {
+        width: 71px;
+      }
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      max-width: 200px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1;
+      color: $white-color;
+
+      @include desktop {
+        max-width: 150px;
+        font-size: 10px;
+      }
+      @media (max-width: 1325px) {
+        display: none;
+      }
+      @include tablet {
+        display: flex;
+      }
+      @media (max-width: 680px) {
+        display: none;
+      }
+      @include mobile {
+        display: flex;
+      }
     }
   }
 
@@ -152,7 +192,7 @@
     gap: 60px;
 
     @include desktop {
-      gap: 30px;
+      gap: 20px;
     }
 
     @include tablet {

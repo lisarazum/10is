@@ -21,6 +21,17 @@
   }
 
   &__photos {
+    grid-template-rows: repeat(4, 220px);
+
+    @include desktop {
+      grid-template-rows: repeat(4, 173px);
+    }
+    @include tablet {
+      grid-template-rows: repeat(4, 92px);
+    }
+    @include mobile {
+      grid-template-rows: repeat(4, 82px);
+    }
     &-link {
       &:nth-child(1) {
         grid-column: 1/3;

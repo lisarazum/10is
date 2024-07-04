@@ -10,17 +10,21 @@
 
   &__item {
     padding: 72px 92px;
+    min-height: 280px;
     background-color: $black-color;
     border-radius: 40px;
     @include desktop {
       padding: 72px 61px;
+      min-height: 245px;
     }
     @include tablet {
       padding: 49px 29px 55px;
+      min-height: 224px;
       border-radius: 30px;
     }
     @include mobile {
       padding: 29px 19px;
+      min-height: 168px;
       border-radius: 20px;
     }
   }
