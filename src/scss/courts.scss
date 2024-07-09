@@ -1,0 +1,10 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+
+@import "./components/pages/courts/hero";
+@import "./components/pages/courts/courts";
+@import "./components/pages/courts/map";
+
+@import "./components/common/footer";

@@ -132,6 +132,7 @@ input {
 .page {
   margin-top: 268px;
   margin-bottom: 160px;
+  overflow: hidden;
   @include desktop {
     margin-top: 231px;
     margin-bottom: 120px;

@@ -1,0 +1,56 @@
+.courts-hero {
+  position: relative;
+  margin-bottom: 160px;
+  height: 686px;
+  border-radius: 40px;
+  overflow: hidden;
+
+  @include desktop {
+    margin-bottom: 120px;
+    height: 560px;
+  }
+  @include tablet {
+    margin-bottom: 100px;
+  }
+  @include mobile {
+    margin-bottom: 60px;
+    height: 100vh;
+    border-radius: 30px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  &__title {
+    color: $white-color;
+    text-align: center;
+  }
+
+  & .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+  }
+}

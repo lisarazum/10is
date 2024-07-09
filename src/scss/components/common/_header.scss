@@ -1,11 +1,11 @@
 .header {
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
   padding: 32px 0 26px;
   width: 100vw;
   border-bottom: 1px solid $white-color;
-  transform: translate(-50%, 0);
+  transform: translate(0, 0);
   transition: all .4s ease-in-out;
   z-index: 9;
 
@@ -19,10 +19,10 @@
 
   &.sticky {
     background: $white-color;
-    transform: translate(-50%, -100%);
+    //transform: translate(-50%, -100%);
 
     &.visible{
-      transform: translate(-50%, 0);
+      //transform: translate(-50%, 0);
     }
 
     & .header{

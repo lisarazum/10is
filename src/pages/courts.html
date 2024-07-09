@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('../partials/common/head.html', {
+'title': 'Наши корты 10is',
+'style': 'courts',
+})
+<body>
+<div class="layout">
+  @include('../partials/common/header.html')
+  <main class="main">
+    @include('../partials/pages/courts/hero.html')
+    @include('../partials/pages/courts/courts.html')
+    @include('../partials/pages/courts/map.html')
+  </main>
+  @include('../partials/common/footer.html')
+</div>
+
+<!--TODO: заменить ключ-->
+<script src="https://api-maps.yandex.ru/2.1/?apikey=39d8774b-7b26-47d2-bfb4-ee36a51c614b&lang=ru_RU" type="text/javascript"></script>
+<script src="/js/courts.js"></script>
+</body>
+</html>
