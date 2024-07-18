@@ -71,9 +71,74 @@
           border-radius: 20px;
         }
       }
+
+      & .accomodation {
+        &__btns {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: translateY(-50%);
+          z-index: 2;
+          opacity: 0;
+          transition: .3s ease;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        &__slider-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background-color: rgb(255 255 255 / 52%);
+          border-radius: 100%;
+
+
+          &.swiper-button-prev {
+            & svg {
+              rotate: 180deg;
+              transform: translateX(8%);
+            }
+          }
+
+          &.swiper-button-next {
+            & svg {
+              transform: translateX(8%);
+            }
+          }
+
+          & svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+          }
+
+          &::after {
+            content: '';
+            display: none;
+          }
+        }
+      }
     }
 
     &-mini-slider {
+
+      & .swiper-slide {
+        border: 1px solid transparent;
+      }
+
+      & .swiper-slide-thumb-active {
+        border: 1px solid $yellow-color;
+        border-radius: 20px;
+        @include mobile {
+          border-radius: 10px;
+        }
+      }
       & img {
         max-height: 123px;
         width: 100%;

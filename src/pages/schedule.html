@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('../partials/common/head.html', {
+'title': 'Расписание 10is',
+'style': 'schedule',
+})
+<body>
+<div class="layout">
+  @include('../partials/common/header.html')
+  <main class="main page">
+    <section class="page-title">
+      <div class="container">
+        <div class="page-title__block">
+          <h1 class="h1 page-title__title">Расписание 10is</h1>
+          <p class="p2 page-title__text">Здесь вы найдёте действующее расписание на интересующие кортов Школы 10is</p>
+        </div>
+      </div>
+    </section>
+
+    @include('../partials/pages/schedule/schedule.html')
+
+  </main>
+  @include('../partials/common/footer.html')
+</div>
+<script src="/js/schedule.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+.prices {
+
+  &__section + .prices__section {
+    margin-top: 160px;
+    @include desktop {
+      margin-top: 120px;
+    }
+    @include tablet {
+      margin-top: 100px;
+    }
+  }
+
+  &-table {
+    margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+      text-align: center;
+
+      @include desktop {
+        margin-bottom: 50px;
+      }
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__head {
+      display: flex;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      background-color: $black-color;
+
+      @include tablet {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+      }
+      @include mobile {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      & li {
+        padding: 30px 40px;
+        width: calc(100% / 3);
+        color: $white-color;
+
+        @include tablet {
+          padding: 20px;
+          font-size: 14px;
+          line-height: 17.61px;
+        }
+        @include mobile {
+          padding: 15px 10px;
+        }
+      }
+    }
+
+    &__body {
+      border-right: 1px solid $grey-color-disabled;
+      border-bottom: 1px solid $grey-color-disabled;
+      border-left: 1px solid $grey-color-disabled;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+
+      @include tablet {
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+      @include mobile {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+
+      &-item {
+        display: flex;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $grey-color-disabled;
+        }
+      }
+
+      & li {
+        display: flex;
+        align-items: center;
+        padding: 30px 40px;
+        width: calc(100% / 3);
+
+        @include tablet {
+          padding: 20px;
+          font-size: 14px;
+          line-height: 17.61px;
+        }
+        @include mobile {
+          padding: 15px 10px;
+        }
+
+        &:first-child {
+          border-right: 1px solid $grey-color-disabled;
+        }
+
+        &:nth-child(2) {
+          border-right: 1px solid $grey-color-disabled;
+        }
+      }
+    }
+
+    &__post-text {
+      display: flex;
+      margin: 0 auto;
+      max-width: 893px;
+      text-align: center;
+
+      @include desktop {
+        max-width: 679px;
+      }
+      @include tablet {
+        max-width: 569px;
+      }
+      @include mobile {
+        max-width: 269px;
+      }
+    }
+  }
+}

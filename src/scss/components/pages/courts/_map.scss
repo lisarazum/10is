@@ -1,0 +1,37 @@
+.courts-map {
+  margin-bottom: 160px;
+  @include desktop {
+    margin-bottom: 140px;
+  }
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__map {
+    min-height: 823px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    @include desktop {
+      min-height: 549px;
+    }
+    @include tablet {
+      min-height: 390px;
+    }
+    @include mobile {
+      min-height: 220px;
+      border-radius: 20px;
+    }
+  }
+}
