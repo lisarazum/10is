@@ -1,0 +1,47 @@
+.blog-title {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 60px;
+  }
+
+  &__pre-title {
+    color: $grey-color;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+    list-style: none;
+  }
+
+  &__tab {
+    &.active {
+      & .blog-title__button {
+        background-color: $yellow-color;
+      }
+    }
+  }
+
+  &__button {
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    color: $black-color;
+    background-color: $white-color;
+    box-shadow: 0px 0px 25px 0px #0000001A;
+    transition: .3s ease;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: $yellow-color;
+    }
+  }
+}
