@@ -4,6 +4,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     list-style: none;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__link {
@@ -47,6 +54,9 @@
   &__title {
     margin-bottom: auto;
     min-height: 60px;
+    @include mobile {
+      min-height: unset;
+    }
   }
 
   &__text {
