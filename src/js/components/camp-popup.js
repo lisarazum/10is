@@ -18,7 +18,7 @@ if (getCookie('visited') == 1) {
   // повторное посещение
 } else {
   // первое посещение
-  setCookie('visited', 1, 365);
+  setCookie('visited', 1, 3);
   setTimeout(function () {
     document.querySelector('.camp-popup').classList.add('active')
   }, 300);
