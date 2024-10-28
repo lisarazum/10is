@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('../partials/common/head.html', {
+'title': 'О нас',
+'style': 'about',
+})
+<body>
+<div class="layout">
+  @include('../partials/common/header.html')
+  <main class="main">
+    @include('../partials/pages/main-page/hero.html')
+
+    @include('../partials/pages/about/top-section.html')
+
+    @include('../partials/pages/about/podcasts.html')
+
+    @include('../partials/pages/about/how-started.html')
+
+    @include('../partials/pages/about/people.html')
+
+    @include('../partials/pages/about/goals.html')
+
+    @include('../partials/pages/about/rules.html')
+
+
+  </main>
+  @include('../partials/common/footer.html')
+</div>
+<script src="/js/about.js"></script>
+</body>
+</html>

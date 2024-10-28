@@ -21,6 +21,7 @@
   }
 
   &__tab {
+    display: flex;
     &.active {
       & .blog-title__button {
         background-color: $yellow-color;

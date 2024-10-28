@@ -1,0 +1,16 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+
+@import "./components/pages/main-page/hero";
+
+@import "./components/pages/about/top-section";
+@import "./components/pages/about/podcasts";
+@import "./components/pages/about/how-started";
+@import "./components/pages/about/people";
+@import "./components/pages/about/goals";
+@import "./components/pages/about/rules";
+
+@import "./components/common/popup";
+@import "./components/common/footer";

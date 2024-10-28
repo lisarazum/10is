@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('../partials/common/head.html', {
+'title': '404',
+'style': 'service-page',
+})
+<body>
+<div class="layout">
+  @include('../partials/common/header.html')
+  <main class="main">
+    <section class="service-page">
+      <div class="container">
+        <h1 class="h1 service-page__title">
+          404
+        </h1>
+        <p class="service-page__text">Что-то стряслось. Перейдите пожалуйста <a href="/">на главную</a>.</p>
+      </div>
+    </section>
+
+
+  </main>
+  @include('../partials/common/footer.html')
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>

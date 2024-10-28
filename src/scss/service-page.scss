@@ -1,0 +1,55 @@
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/common/header";
+
+@import "./components/common/popup";
+@import "./components/common/footer";
+
+.service-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 108px;
+  min-height: 600px;
+  height: calc(100vh - 522px);
+
+  @include tablet {
+    height: calc(100vh - 487px);
+  }
+
+  @include mobile {
+    padding-top: 70px;
+  }
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 10vw;
+    line-height: 1;
+
+    @include tablet {
+      font-size: 14vw;
+    }
+    @include mobile {
+      font-size: 100px;
+    }
+  }
+
+  &__text {
+    & a {
+      color: $black-color;
+      text-decoration: underline;
+      transition: .3s ease;
+
+      &:hover {
+        color: $yellow-color;
+      }
+    }
+  }
+}

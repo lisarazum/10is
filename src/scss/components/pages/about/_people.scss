@@ -1,0 +1,175 @@
+.people {
+  margin-bottom: 160px;
+  @include desktop {
+    margin-bottom: 120px;
+  }
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 80px;
+
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__pre-title,
+  &__title {
+    text-align: center;
+  }
+
+  &__pre-title {
+    color: #999999;
+  }
+
+  &-slider {
+
+    &__slide {
+      max-width: 800px;
+
+      @include desktop {
+        max-width: 630px;
+      }
+      @include tablet {
+        max-width: 510px;
+      }
+      @include mobile {
+        width: 100%;
+      }
+
+      &.swiper-slide-prev,
+      &.swiper-slide-next {
+        opacity: .4;
+
+        & .people-slider__content {
+          opacity: 0;
+        }
+
+        & .people-slider__pagination {
+          opacity: 0;
+        }
+      }
+    }
+    &__slide-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__photo {
+      margin-bottom: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__pagination {
+      position: relative;
+      top: 0;
+      bottom: 0;
+
+      & .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background-color: $white-color;
+        border: 1px solid $black-color;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background-color: $black-color;
+        }
+
+        @include tablet {
+          width: 10px;
+          height: 10px;
+        }
+        @include mobile {
+          width: 7px;
+          height: 7px;
+        }
+      }
+    }
+
+    &__content {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid $black-color;
+
+      @include tablet {
+        margin-top: 30px;
+        padding-top: 30px;
+      }
+      @include mobile {
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    &__name {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__slider-btn {
+    top: 31%;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: $yellow-color;
+
+    @include tablet {
+      width: 30px;
+      height: 30px;
+    }
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.swiper-button-prev {
+      left: 23%;
+      @include desktop {
+        left: 15%;
+      }
+      @include mobile {
+        left: 20px;
+      }
+    }
+    &.swiper-button-next {
+      right: 23%;
+      @include desktop {
+        right: 15%;
+      }
+      @include mobile {
+        right: 20px;
+      }
+    }
+
+    &::after {
+      color: black;
+      font-size: 17px;
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+}

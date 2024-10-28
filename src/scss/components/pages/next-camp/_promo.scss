@@ -48,6 +48,7 @@
     gap: 40px;
 
     @include desktop {
+      flex-wrap: wrap;
       margin: 0 auto;
       max-width: 1085px;
     }
@@ -57,7 +58,6 @@
     }
 
     @media (max-width: 730px) {
-      flex-wrap: wrap;
       gap: 30px;
       max-width: unset;
     }
@@ -80,6 +80,13 @@
     @media (max-width: 730px) {
       max-width: unset;
       width: calc(50% - 15px);
+    }
+
+    &:nth-child(5) {
+      @include tablet {
+        max-width: unset;
+        width: 100%;
+      }
     }
 
     &__svg {
@@ -108,16 +115,6 @@
 
     &__title {
       text-align: center;
-
-      @include tablet {
-        font-size: 20px;
-        line-height: 25px;
-      }
-
-      @include mobile {
-        font-size: 16px;
-        line-height: 1;
-      }
     }
   }
 }
