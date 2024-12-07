@@ -5,3 +5,4 @@ import './components/slider/slider-reviews';
 import './components/faq-content';
 import './components/textarea-auto-resize';
 import './components/camp-popup';
+import './components/banner-certificate';

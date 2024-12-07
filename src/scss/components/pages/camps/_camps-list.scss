@@ -25,28 +25,11 @@
     }
   }
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    @include desktop {
-      gap: 30px;
-    }
-    @include tablet {
-      flex-direction: column;
-      gap: 20px;
-    }
-    @include mobile {
-      gap: 10px;
-    }
-  }
-
   &__item {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% / 2 - 20px);
     min-height: 500px;
     border-radius: 40px;
     overflow: hidden;
@@ -55,11 +38,9 @@
     background-color:rgba(0, 0, 0, 0.4);
     background-blend-mode: color;
     @include desktop {
-      width: calc(50% - 15px);
       min-height: 446px;
     }
     @include tablet {
-      width: 100%;
       min-height: 405px;
     }
     @include mobile {

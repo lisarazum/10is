@@ -252,3 +252,111 @@ input {
     flex: 1 1;
   }
 }
+
+.swiper {
+  position: relative;
+
+  &:hover {
+    & .swiper__btns {
+      & .swiper-button-next,
+      & .swiper-button-prev {
+        opacity: 1;
+
+        &.swiper-button-disabled {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  & .swiper-pagination {
+    bottom: 0px;
+
+    & .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: $black-color;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $yellow-color;
+      }
+    }
+  }
+}
+.swiper__btns {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 20;
+  @include mobile {
+    display: flex;
+  }
+
+  & .swiper-button-next,
+  & .swiper-button-prev {
+    position: relative;
+    top: 0;
+    left: unset;
+    right: unset;
+    display: block;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    background-color: $yellow-color;
+    border-radius: 100%;
+    transition: .3s ease opacity;
+
+    @include desktop {
+      width: 60px;
+      height: 60px;
+    }
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      opacity: 1;
+    }
+
+    & svg {
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 50%;
+      height: 50%;
+      stroke: #000000;
+      stroke-width: 2px;
+      fill: transparent;
+      @include desktop {
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+      @include tablet {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    }
+    &:after {
+      display: none;
+    }
+
+    &.swiper-button-prev {
+      & svg {
+        rotate: 180deg;
+      }
+    }
+
+    &.swiper-button-next {
+      left: auto;
+      & svg {
+        rotate: 0deg;
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+  }
+}

@@ -7,6 +7,9 @@
 @import "./components/locations/locations";
 @import "./components/pages/main-page/team";
 @import "./components/banners/banner-trial";
+
+@import "./components/banners/banner-certificate";
+
 @import "./components/reviews/reviews";
 @import "./components/blocks/program-block";
 @import "./components/pages/main-page/instagram";
@@ -19,3 +22,6 @@
 
 @import "./components/common/camp-popup";
 
+.layout {
+  padding-top: 108px;
+}

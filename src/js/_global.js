@@ -27,3 +27,45 @@ if(showPopupButtons){
     })
   })
 }
+
+// animation
+
+let scrollItems = document.querySelectorAll('._anim-item')
+
+if (scrollItems.length > 0) {
+  window.addEventListener('scroll', animOnScroll)
+  function animOnScroll() {
+    for (let i = 0; i < scrollItems.length; i++) {
+      const scrollItem = scrollItems[i]
+      const scrollItemHeight = scrollItem.offsetHeight
+      const scrollItemOffset = offset(scrollItem).top
+      const animStart = 5
+
+      let scrollItemPoint = window.innerHeight - scrollItemHeight / animStart
+      if (scrollItemHeight > window.innerHeight) {
+        scrollItemPoint = window.innerHeight - window.innerHeight / animStart
+      }
+
+      if ((pageYOffset > scrollItemOffset - scrollItemPoint) && pageYOffset < (scrollItemOffset + scrollItemHeight)) {
+        scrollItem.classList.add('animate')
+      } else {
+        if (!scrollItem.classList.contains('no-hide')) {
+          scrollItem.classList.remove('animate')
+        }
+
+      }
+    }
+  }
+
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+  }
+
+  setTimeout(() => {
+    animOnScroll()
+
+  }, 300)
+}
