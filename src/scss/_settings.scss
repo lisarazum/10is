@@ -69,17 +69,6 @@ input {
   margin: 0 auto;
   padding: 0 15px;
   max-width: calc(1640px + 30px);
-  @include desktop {
-    padding: 0 75px;
-    // max-width: calc(1290px + 30px);
-  }
-  @include tablet {
-    padding: 0 39px;
-    // max-width: calc(690px + 30px);
-  }
-  @include mobile {
-    padding: 0 10px;
-  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
