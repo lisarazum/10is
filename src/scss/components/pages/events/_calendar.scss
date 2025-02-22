@@ -300,5 +300,163 @@
       }
     }
   }
+
+  &.tournament {
+    & .calendar {
+      &-content__block {
+        width: 100%;
+      }
+
+      &-content__search {
+        margin-bottom: 30px;
+        padding: 10px 20px;
+        width: 100%;
+        outline: 0;
+        border-bottom: 1px solid #FFF000;
+      }
+
+      &-content__tabs {
+        @include mobile {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      &-table__body-item li {
+        & .title {
+          display: none;
+
+          @include mobile {
+            display: flex;
+            margin-right: 5px;
+          }
+        }
+
+        @include mobile {
+          font-weight: 500;
+        }
+      }
+
+      &-content__info--4 {
+        & .calendar-table__head li {
+          width: calc((100% - 30%) / 3);
+
+          @include mobile {
+            width: 100%;
+          }
+
+          &:first-child {
+            width: 30%;
+
+            @include mobile {
+              width: 100%;
+            }
+          }
+        }
+
+        & .calendar-table__body-item li {
+          width: calc((100% - 30%) / 3);
+          @include mobile {
+            width: 100%;
+          }
+
+          &:first-child {
+            width: 30%;
+
+            @include mobile {
+              width: 100%;
+            }
+          }
+
+          &:last-child {
+            background-color: #F5F5F5;
+          }
+        }
+      }
+
+      &-content__info--3 {
+        & .calendar-table__head li {
+          width: calc((100% - 30%) / 2);
+
+          @include mobile {
+            width: 100%;
+          }
+
+          &:first-child {
+            width: 30%;
+
+            @include mobile {
+              width: 100%;
+            }
+          }
+        }
+
+        & .calendar-table__body-item li {
+          width: calc((100% - 30%) / 2);
+
+          @include mobile {
+            width: 100%;
+          }
+
+          &:first-child {
+            width: 30%;
+
+            @include mobile {
+              width: 100%;
+            }
+          }
+
+          &:last-child {
+            background-color: #F5F5F5;
+          }
+        }
+      }
+
+    }
+  }
 }
 
+.table-sort {
+  & .sort {
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+
+    // Стрелочка
+    & span {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        right: -30px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        opacity: .5;
+        mask-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath stroke='none' d='M0 0h24v24H0z'/%3e%3cpath d='M3 9l4-4l4 4m-4 -4v14'/%3e%3cpath d='M21 15l-4 4l-4-4m4 4v-14'/%3e%3c/svg%3e");
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        background-color: #FFF000;
+        transition: .3s ease;
+      }
+    }
+
+    &:hover span:after {
+      opacity: 1;
+    }
+
+    &.asc {
+      & span:after {
+        opacity: 1;
+      }
+    }
+
+    &.desc {
+      & span:after {
+        opacity: 1;
+      }
+    }
+  }
+}

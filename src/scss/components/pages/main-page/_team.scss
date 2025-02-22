@@ -1,250 +1,103 @@
-.team {
-  padding: 160px 0;
-  background-color: $black-color;
-  border-radius: 40px;
-  @include desktop {
-    padding: 120px 0;
-  }
-  @include tablet {
-    padding: 100px 0;
-  }
-  @include mobile {
-    border-radius: 30px;
+.yellow-box {
+  padding: 5px 15px;
+  background: $yellow-color;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.team-block {
+  overflow: hidden;
+  & .container,
+  & .swiper {
+    overflow: visible;
   }
 
-  &-title__block {
+  & .swiper-slide {
+    display: flex;
+    align-items: stretch;
+    width: 420px;
+    height: auto;
+
+    @include mobile {
+      width: 260px;
+    }
+  }
+
+  &__slide {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 100px;
-    @include desktop {
-      flex-direction: column-reverse;
-      margin-bottom: 60px;
-    }
-    @include tablet {
-      margin-bottom: 50px;
-    }
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 40px;
+    box-shadow: 0px 4px 40px 0px #0000001A;
+
     @include mobile {
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 40px;
-    }
-
-    & svg {
-      width: 50px;
-      height: 50px;
-      fill: $yellow-color;
-      @include mobile {
-        width: 30px;
-        height: 30px;
-      }
+      padding: 15px;
+      border-radius: 20px;
     }
   }
 
-  &__title {
-    color: $white-color;
-    cursor: default;
+  &__img {
+    margin-bottom: 40px;
+    max-height: 330px;
+    width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: top;
+
+    @include mobile {
+      margin-bottom: 20px;
+      max-height: 205px;
+      border-radius: 20px;
+    }
   }
 
-  &__list {
+  &__descr {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 
-    @include tablet {
-      flex-direction: column;
+  &__name {
+    margin-bottom: 25px;
+    font-weight: 500;
+
+    @include desktop {
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
-  &-item {
-    display: grid;
-    grid-template-columns: 30% calc(100% - 30% - 40px);
-    grid-template-rows: 45% auto;
-    gap: 20px 40px;
-    width: calc(100% / 2 - 20px);
-    @include desktop {
-      gap: 20px 30px;
-      grid-template-columns: 31% calc(100% - 31% - 30px);
-      grid-template-rows: 48% auto;
-    }
-    @include tablet {
-      grid-template-columns: 190px calc(100% - 190px - 30px);
-      grid-template-rows: auto;
-      width: 100%;
-    }
-    @include mobile {
-      grid-template-columns: 34% calc(66% - 20px);
-      gap: 20px;
-    }
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 300;
 
-    &:nth-child(odd) {
-      margin-right: 40px;
-      @include desktop {
-        margin-right: 32px;
-      }
-      @include tablet {
-        margin-right: 0;
-      }
-    }
-
-    &:nth-child(1),
-    &:nth-child(2) {
-      padding-bottom: 39px;
-      border-bottom: 1px solid rgb(255, 255, 255, .2);
-      @include desktop {
-        padding-bottom: 29px;
-      }
-      @include tablet {
-        padding-bottom: 0;
-        border-bottom: 0;
-      }
-    }
-    &:nth-child(3),
-    &:nth-child(4) {
-      padding-top: 40px;
-      @include desktop {
-        padding-top: 30px;
-      }
-      @include tablet {
-        padding-top: 0;
-      }
+    & .yellow-box {
+      display: inline;
     }
 
     &:not(:last-child) {
-      @include tablet {
-        padding-bottom: 19px;
-        border-bottom: 1px solid rgb(255, 255, 255, .2);
-      }
+      margin-bottom: 5px;
     }
+  }
 
-    &:not(:first-child) {
-      @include tablet {
-        padding-top: 20px;
-      }
-    }
-
-    &__img {
-      grid-column: 1 / 2;
-      grid-row: 1 / 3;
-
-      @include mobile {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-      }
-
-      & img {
-        aspect-ratio: 1/1;
-        height: 240px;
-        width: 240px;
-        object-position: top;
-        border-radius: 20px;
-
-        @include desktop {
-          height: 190px;
-          width: 190px;
-        }
-        @include mobile {
-          height: 100px;
-          width: 100px;
-          border-radius: 10px;
-        }
-      }
-    }
-
-    &__title {
-      margin-bottom: 20px;
-      max-width: 383px;
-      color: $yellow-color;
-      cursor: default;
-      @include desktop {
-        max-width: 283px;
-      }
-      @include tablet {
-        max-width: 100%;
-      }
-      @include mobile {
-        margin-bottom: 10px;
-        max-width: 123px;
-      }
-    }
-
-    &__experience {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: default;
-      @include mobile {
-        gap: 5px;
-      }
-
-      &-title,
-      &-years {
-        display: inline-flex;
-      }
-
-      &-title {
-        color: $white-color;
-        @include desktop {
-          font-size: 18px;
-          line-height: 20px;
-        }
-        @include tablet {
-          font-size: 16px;
-        }
-        @include tablet {
-          font-size: 12px;
-          line-height: 14px;
-        }
-      }
-
-      &-years {
-        padding: 3px 16px 2px;
-        color: $black-color;
-        background-color: $yellow-color;
-        border-radius: 50px;
-        @include desktop {
-          padding: 3px 17px 2px;
-          font-size: 16px;
-          line-height: 20px;
-        }
-        @include mobile {
-          padding: 3px 10px;
-          font-size: 12px;
-          line-height: 14px;
-        }
-      }
-    }
-
-    &__description {
-      display: flex;
-      flex-direction: column;
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      gap: 5px;
-      height: fit-content;
-      @include mobile {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
-      }
-
-      &-text {
-        display: none;
-        color: $white-color;
-        cursor: default;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-          display: flex;
-        }
-        @include tablet {
-          font-size: 16px;
-          line-height: 20px;
-        }
-        @include mobile {
-          font-size: 12px;
-          line-height: 14px;
-        }
-      }
+  &__yellow {
+    padding: 20px;
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17.61px;
+    text-align: start;
+    @include mobile {
+      font-size: 10px;
+      line-height: 12px;
     }
   }
 }

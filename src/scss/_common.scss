@@ -1,0 +1,44 @@
+//Секция
+.section {
+  margin-bottom: 160px;
+  @include desktop {
+    margin-bottom: 120px;
+  }
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  &.section-padding {
+    margin-bottom: 0;
+    padding-bottom: 160px;
+    @include desktop {
+      margin-bottom: 0;
+      padding-bottom: 120px;
+    }
+    @include tablet {
+      margin-bottom: 0;
+      padding-bottom: 100px;
+    }
+  }
+}
+
+//Заголовок секции
+.section-title {
+  margin-bottom: 80px;
+  cursor: default;
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+  @include tablet {
+    margin-bottom: 50px;
+  }
+  @include mobile {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
